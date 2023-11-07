@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  	<head>
     <title>Coffee - Free Bootstrap 4 Template by Colorlib</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -33,94 +33,112 @@
 
 	</head>
 	<body>
-	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-		<div class="container">
-		  <a class="navbar-brand" href="index.html">Coffee<small>Blend</small></a>
-		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+		<div class="container" id='book'>
+		<a class="navbar-brand" href="index.html">Coffee<small>Blend</small></a>
+		
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="oi oi-menu"></span> Menu
-		  </button>
-		  <div class="collapse navbar-collapse" id="ftco-nav">
+		</button>
+
+		  	<div class="collapse navbar-collapse" id="ftco-nav">
 			<ul class="navbar-nav ml-auto">
-			  <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-			  <li class="nav-item"><a href="menu.html" class="nav-link">Menu</a></li>
-			  <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-			  <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-			  <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-			  <li class="nav-item dropdown">
+			  	<li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+			  	<li class="nav-item"><a href="menu.html" class="nav-link">Menu</a></li>
+			  	<li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+			  	<li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+			  	<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+			  	<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle" href="room.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>
+				
 				<div class="dropdown-menu" aria-labelledby="dropdown04">
 				  <a class="dropdown-item" href="shop.html">Shop</a>
 				  <a class="dropdown-item" href="product-single.html">Single Product</a>
 				  <a class="dropdown-item" href="room.html">Cart</a>
 				  <a class="dropdown-item" href="checkout.html">Checkout</a>
 				</div>
-			  </li>
+
+	
 			  <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
 			  <li class="nav-item cart"><a href="cart.html" class="nav-link"><span class="icon icon-shopping_cart"></span><span class="bag d-flex justify-content-center align-items-center"><small>1</small></span></a></li>
+			  
 			  <?php if (isset($_SESSION['status']) && $_SESSION['status'] == 'loggedin') : ?>
+			  
 				<?php echo 'Logged in as : ' . $_SESSION['name'] . '  |'; ?>
-				<form name='form3' id='form1' method="post">
-				<input style="width:95%;height:75%;size:100%;" class="btn btn-danger custom" type="submit" value="Logout" formaction="logout.php">
-				</form>
-			  <?php else : ?>
-				<li class="nav-item">
-				<button style="width:95%;height:75%;size:100%;" class="btn btn-success custom" onclick="document.getElementById('login_form').style.display='block'"> Login </button></li>
-				<li class="nav-item">
-				<button style="width:95%;height:75%;size:100%;" class="btn btn-danger custom" onclick="document.getElementById('sign_up_form').style.display='block'"> Register </button></li>
+					<form name='form3' id='form1' method="post">
+						<input style="width:95%;height:75%;size:100%;" class="btn btn-danger custom" type="submit" value="Logout" formaction="logout.php">
+					</form>
+			  
+				<?php else : ?>
+				<div style="display: flex;">
+				
+					<div style="flex-grow: 1;text-align: center;">
+					<li class="nav-item">
+					<button style="margin-right:5px;width:100%;height:100%;size:100%;margin-top:10px;" class="btn btn-success" onclick="document.getElementById('login_form').style.display='block';document.getElementById('book').style.display = 'none';"> Login </button></li>
+					</div>
+
+					<div style="flex-grow: 1;text-align: center;">
+					<li class="nav-item">
+					<button style="margin-left:5px;width:100%;height:100%;size:100%;margin-top:10px;" class="btn btn-danger" onclick="document.getElementById('sign_up_form').style.display='block';document.getElementById('book').style.display = 'none';"> Register </button></li>
+					</div>
 					
-				<?php endif ; ?>
 				</div>
-			  </ul>
-	
-		</div>
-	  </div>
+
+				<?php endif ; ?>
+				
+			</ul>
+			</div>
+	  	</div>
+
 	</nav>
-	  </nav>
     <!-- END nav -->
+
+	<!-- Register -->
 	<div name='form1' id="sign_up_form" class="modal">
-  <span onclick="document.getElementById('sign_up_form').style.display='none'" class="close" title="Close Modal">&times;</span>
-  <form autocomplete="on"  class="modal-content" method="post">
-    <div class="container">
-      <h1>Register</h1>
-      <p>Please fill in this form to create an account.</p>
-      <hr>
-      
-      <input type="text" name="userid" placeholder="Username" required>
-      <input type="text" name="email" placeholder="Email" required>
-      <input type="password" name="password" placeholder="Password" required>
+	<span onclick="document.getElementById('sign_up_form').style.display='none'" class="close" title="Close Modal">&times;</span>
+	<form autocomplete="on"  class="modal-content" method="post">
+		<div class="container">
+		<h1>Register</h1>
+		<p>Please fill in this form to create an account.</p>
+		<hr>
+		
+		<input type="text" name="userid" placeholder="Username" required>
+		<input type="text" name="email" placeholder="Email" required>
+		<input type="password" name="password" placeholder="Password" required>
 
-      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+		<p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 
-      <div class="clearfix">
-        <button type="button" onclick="document.getElementById('sign_up_form').style.display='none'" class="cancelbtn">Cancel</button>
-        <button type="submit" class="signupbtn" formaction="submit.php">Sign Up</button>
-      </div>
-    </div>
-  </form>
-</div>
+		<div class="clearfix">
+			<button type="button" onclick="document.getElementById('sign_up_form').style.display='none'" class="cancelbtn">Cancel</button>
+			<button type="submit" class="signupbtn" formaction="submit.php">Sign Up</button>
+		</div>
+		</div>
+	</form>
+	</div>
 
-<!-- Login -->
+	<!-- Login -->
 
-<div name='form2' id="login_form" class="modal">
-  <span onclick="document.getElementById('login_form').style.display='none'" class="close" title="Close Modal">&times;</span>
-  <form autocomplete="on"  class="modal-content" method="post">
-    <div class="container">
-      <h1>Login</h1>
-      <p>Please fill in this form to log into an account.</p>
-      <hr>
+	<div name='form2' id="login_form" class="modal">
+	<span onclick="document.getElementById('login_form').style.display='none'" class="close" title="Close Modal">&times;</span>
+	<form autocomplete="on"  class="modal-content" method="post">
+		<div class="container">
+		<h1>Login</h1>
+		<p>Please fill in this form to log into an account.</p>
+		<hr>
 
-      <input type="text" name="email" placeholder="Email" required>
-      <input type="password" name="password" placeholder="Password" required>
+		<input type="text" name="email" placeholder="Email" required>
+		<input type="password" name="password" placeholder="Password" required>
 
-      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+		<p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 
-      <div class="clearfix">
-        <button type="button" onclick="document.getElementById('login_form').style.display='none'" class="cancelbtn">Cancel</button>
-        <button type="submit" class="signupbtn" formaction="login.php">Login</button>
-      </div>
-    </div>
-  </form>
-</div>
+		<div class="clearfix">
+			<button type="button" onclick="document.getElementById('login_form').style.display='none'" class="cancelbtn">Cancel</button>
+			<button type="submit" class="signupbtn" formaction="login.php">Login</button>
+		</div>
+		</div>
+	</form>
+	</div>
 
     <section class="home-slider owl-carousel">
       <div class="slider-item" style="background-image: url(images/bg_1.jpg);">
@@ -200,7 +218,8 @@
 	    				</div>
 	    			</div>
 	    		</div>
-	    		<div class="book p-4">
+
+	    		<div class="book p-4" >
 	    			<h3>Book a Table</h3>
 	    			<form action="#" class="appointment-form">
 	    				<div class="d-md-flex">
@@ -238,6 +257,7 @@
 	    				</div>
 	    			</form>
 	    		</div>
+
     		</div>
     	</div>
     </section>
@@ -311,22 +331,22 @@
     				<div class="row">
     					<div class="col-md-6">
     						<div class="menu-entry">
-		    					<a href="#" class="img" style="background-image: url(images/menu-1.jpg);"></a>
+		    					<a href="#" class="img" style="background-image: url(images/menu-1.jpg);" alt='Coffee'></a>
 		    				</div>
     					</div>
     					<div class="col-md-6">
     						<div class="menu-entry mt-lg-4">
-		    					<a href="#" class="img" style="background-image: url(images/menu-2.jpg);"></a>
+		    					<a href="#" class="img" style="background-image: url(images/menu-2.jpg);" alt='Coffee'></a>
 		    				</div>
     					</div>
     					<div class="col-md-6">
     						<div class="menu-entry">
-		    					<a href="#" class="img" style="background-image: url(images/menu-3.jpg);"></a>
+		    					<a href="#" class="img" style="background-image: url(images/menu-3.jpg);" alt='Coffee'></a>
 		    				</div>
     					</div>
     					<div class="col-md-6">
     						<div class="menu-entry mt-lg-4">
-		    					<a href="#" class="img" style="background-image: url(images/menu-4.jpg);"></a>
+		    					<a href="#" class="img" style="background-image: url(images/menu-4.jpg);" alt='Coffee'></a>
 		    				</div>
     					</div>
     				</div>
@@ -335,7 +355,7 @@
     	</div>
     </section>
 
-    <section class="ftco-counter ftco-bg-dark img" id="section-counter" style="background-image: url(images/bg_2.jpg);" data-stellar-background-ratio="0.5">
+    <section class="ftco-counter ftco-bg-dark img" id="section-counter" style="background-image: url(images/bg_2.jpg);" data-stellar-background-ratio="0.5" alt='Coffee'>
 			<div class="overlay"></div>
       <div class="container">
         <div class="row justify-content-center">
@@ -395,7 +415,7 @@
         <div class="row">
         	<div class="col-md-3">
         		<div class="menu-entry">
-    					<a href="#" class="img" style="background-image: url(images/menu-1.jpg);"></a>
+    					<a href="#" class="img" style="background-image: url(images/menu-1.jpg);" alt='Coffee'></a>
     					<div class="text text-center pt-4">
     						<h3><a href="#">Coffee Capuccino</a></h3>
     						<p>A small river named Duden flows by their place and supplies</p>
@@ -406,7 +426,7 @@
         	</div>
         	<div class="col-md-3">
         		<div class="menu-entry">
-    					<a href="#" class="img" style="background-image: url(images/menu-2.jpg);"></a>
+    					<a href="#" class="img" style="background-image: url(images/menu-2.jpg);" alt='Coffee'></a>
     					<div class="text text-center pt-4">
     						<h3><a href="#">Coffee Capuccino</a></h3>
     						<p>A small river named Duden flows by their place and supplies</p>
@@ -417,7 +437,7 @@
         	</div>
         	<div class="col-md-3">
         		<div class="menu-entry">
-    					<a href="#" class="img" style="background-image: url(images/menu-3.jpg);"></a>
+    					<a href="#" class="img" style="background-image: url(images/menu-3.jpg);" alt='Coffee'></a>
     					<div class="text text-center pt-4">
     						<h3><a href="#">Coffee Capuccino</a></h3>
     						<p>A small river named Duden flows by their place and supplies</p>
@@ -428,7 +448,7 @@
         	</div>
         	<div class="col-md-3">
         		<div class="menu-entry">
-    					<a href="#" class="img" style="background-image: url(images/menu-4.jpg);"></a>
+    					<a href="#" class="img" style="background-image: url(images/menu-4.jpg);" alt='Coffee'></a>
     					<div class="text text-center pt-4">
     						<h3><a href="#">Coffee Capuccino</a></h3>
     						<p>A small river named Duden flows by their place and supplies</p>
@@ -445,28 +465,28 @@
     	<div class="container-wrap">
     		<div class="row no-gutters">
 					<div class="col-md-3 ftco-animate">
-						<a href="gallery.html" class="gallery img d-flex align-items-center" style="background-image: url(images/gallery-1.jpg);">
+						<a href="gallery.html" class="gallery img d-flex align-items-center" style="background-image: url(images/gallery-1.jpg);" alt='Coffee'>
 							<div class="icon mb-4 d-flex align-items-center justify-content-center">
     						<span class="icon-search"></span>
     					</div>
 						</a>
 					</div>
 					<div class="col-md-3 ftco-animate">
-						<a href="gallery.html" class="gallery img d-flex align-items-center" style="background-image: url(images/gallery-2.jpg);">
+						<a href="gallery.html" class="gallery img d-flex align-items-center" style="background-image: url(images/gallery-2.jpg);" alt='Coffee'>
 							<div class="icon mb-4 d-flex align-items-center justify-content-center">
     						<span class="icon-search"></span>
     					</div>
 						</a>
 					</div>
 					<div class="col-md-3 ftco-animate">
-						<a href="gallery.html" class="gallery img d-flex align-items-center" style="background-image: url(images/gallery-3.jpg);">
+						<a href="gallery.html" class="gallery img d-flex align-items-center" style="background-image: url(images/gallery-3.jpg);" alt='Coffee'>
 							<div class="icon mb-4 d-flex align-items-center justify-content-center">
     						<span class="icon-search"></span>
     					</div>
 						</a>
 					</div>
 					<div class="col-md-3 ftco-animate">
-						<a href="gallery.html" class="gallery img d-flex align-items-center" style="background-image: url(images/gallery-4.jpg);">
+						<a href="gallery.html" class="gallery img d-flex align-items-center" style="background-image: url(images/gallery-4.jpg);" alt='Coffee'>
 							<div class="icon mb-4 d-flex align-items-center justify-content-center">
     						<span class="icon-search"></span>
     					</div>
@@ -505,7 +525,7 @@
 		              	<div class="row">
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/dish-1.jpg);"></a>
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/dish-1.jpg);" alt='Coffee'></a>
 		              				<div class="text">
 		              					<h3><a href="#">Grilled Beef</a></h3>
 		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -516,7 +536,7 @@
 		              		</div>
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/dish-2.jpg);"></a>
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/dish-2.jpg);" alt='Coffee'></a>
 		              				<div class="text">
 		              					<h3><a href="#">Grilled Beef</a></h3>
 		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -527,7 +547,7 @@
 		              		</div>
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/dish-3.jpg);"></a>
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/dish-3.jpg);" alt='Coffee'></a>
 		              				<div class="text">
 		              					<h3><a href="#">Grilled Beef</a></h3>
 		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -543,7 +563,7 @@
 		                <div class="row">
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/drink-1.jpg);"></a>
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/drink-1.jpg);" alt='Coffee'></a>
 		              				<div class="text">
 		              					<h3><a href="#">Lemonade Juice</a></h3>
 		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -554,7 +574,7 @@
 		              		</div>
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/drink-2.jpg);"></a>
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/drink-2.jpg);" alt='Coffee'></a>
 		              				<div class="text">
 		              					<h3><a href="#">Pineapple Juice</a></h3>
 		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -565,7 +585,7 @@
 		              		</div>
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/drink-3.jpg);"></a>
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/drink-3.jpg);" alt='Coffee'></a>
 		              				<div class="text">
 		              					<h3><a href="#">Soda Drinks</a></h3>
 		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -581,7 +601,7 @@
 		                <div class="row">
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/dessert-1.jpg);"></a>
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/dessert-1.jpg);" alt='Coffee'></a>
 		              				<div class="text">
 		              					<h3><a href="#">Hot Cake Honey</a></h3>
 		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -592,7 +612,7 @@
 		              		</div>
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/dessert-2.jpg);"></a>
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/dessert-2.jpg);" alt='Coffee'></a>
 		              				<div class="text">
 		              					<h3><a href="#">Hot Cake Honey</a></h3>
 		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -603,7 +623,7 @@
 		              		</div>
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/dessert-3.jpg);"></a>
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/dessert-3.jpg);" alt='Coffee'></a>
 		              				<div class="text">
 		              					<h3><a href="#">Hot Cake Honey</a></h3>
 		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -642,7 +662,7 @@
 	              </blockquote>
 	              <div class="author d-flex mt-4">
 	                <div class="image mr-3 align-self-center">
-	                  <img src="images/person_1.jpg" alt="">
+	                  <img src="images/person_1.jpg"  alt='Coffee'>
 	                </div>
 	                <div class="name align-self-center">Louise Kelly <span class="position">Illustrator Designer</span></div>
 	              </div>
@@ -655,7 +675,7 @@
 	              </blockquote>
 	              <div class="author d-flex mt-4">
 	                <div class="image mr-3 align-self-center">
-	                  <img src="images/person_2.jpg" alt="">
+	                  <img src="images/person_2.jpg"  alt='Coffee'>
 	                </div>
 	                <div class="name align-self-center">Louise Kelly <span class="position">Illustrator Designer</span></div>
 	              </div>
@@ -668,7 +688,7 @@
 	              </blockquote>
 	              <div class="author d-flex mt-4">
 	                <div class="image mr-3 align-self-center">
-	                  <img src="images/person_3.jpg" alt="">
+	                  <img src="images/person_3.jpg"  alt='Coffee'>
 	                </div>
 	                <div class="name align-self-center">Louise Kelly <span class="position">Illustrator Designer</span></div>
 	              </div>
@@ -681,7 +701,7 @@
 	              </blockquote>
 	              <div class="author d-flex mt-4">
 	                <div class="image mr-3 align-self-center">
-	                  <img src="images/person_2.jpg" alt="">
+	                  <img src="images/person_2.jpg"  alt='Coffee'>
 	                </div>
 	                <div class="name align-self-center">Louise Kelly <span class="position">Illustrator Designer</span></div>
 	              </div>
@@ -694,7 +714,7 @@
 	            </blockquote>
 	            <div class="author d-flex mt-4">
 	              <div class="image mr-3 align-self-center">
-	                <img src="images/person_3.jpg" alt="">
+	                <img src="images/person_3.jpg"  alt='Coffee'>
 	              </div>
 	              <div class="name align-self-center">Louise Kelly <span class="position">Illustrator Designer</span></div>
 	            </div>
@@ -765,12 +785,13 @@
 		
 		<section class="ftco-appointment">
 			<div class="overlay"></div>
-    	<div class="container-wrap">
+    	<div class="container-wrap" id='book'>
     		<div class="row no-gutters d-md-flex align-items-center">
     			<div class="col-md-6 d-flex align-self-stretch">
     				<div id="map"></div>
     			</div>
-	    		<div class="col-md-6 appointment ftco-animate">
+	    		
+				<div class="col-md-6 appointment ftco-animate" >
 	    			<h3 class="mb-3">Book a Table</h3>
 	    			<form action="#" class="appointment-form">
 	    				<div class="d-md-flex">
@@ -807,10 +828,10 @@
 		            </div>
 	    				</div>
 	    			</form>
-	    		</div>    			
+	    		</div>
+		</div>
     		</div>
-    	</div>
-    </section>
+    	</section>
 
     <footer class="ftco-footer ftco-section img">
     	<div class="overlay"></div>
@@ -831,7 +852,7 @@
             <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">Recent Blog</h2>
               <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
+                <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);" alt='Coffee'></a>
                 <div class="text">
                   <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
                   <div class="meta">
@@ -842,7 +863,7 @@
                 </div>
               </div>
               <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
+                <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);" alt='Coffee'></a>
                 <div class="text">
                   <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
                   <div class="meta">
@@ -891,17 +912,17 @@
     
 
 
-<script>
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == document.getElementById('sign_up_form') || event.target == document.getElementById('login_form')) {
-    document.getElementById('sign_up_form').style.display = "none";
-    document.getElementById('login_form').style.display = "none";
-  }
-}
-
-</script>
+	<script>
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+	if (event.target == document.getElementById('sign_up_form') || event.target == document.getElementById('login_form')) {
+		document.getElementById('sign_up_form').style.display = "none";
+		document.getElementById('login_form').style.display = "none";
+		document.getElementById('book').style.display = 'block';
+		
+	}
+	}
+	</script>
 
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
