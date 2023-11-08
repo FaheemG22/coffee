@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php session_start();?>
 <html lang="en">
   	<head>
     <title>Coffee - Free Bootstrap 4 Template by Colorlib</title>
@@ -33,10 +34,10 @@
 
 	</head>
 	<body>
-
+<section id='hide'>
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-		<div class="container" id='book'>
-		<a class="navbar-brand" href="index.html">Coffee<small>Blend</small></a>
+		<div class="container">
+		<a class="navbar-brand" href="index.php">Coffee<small>Blend</small></a>
 		
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="oi oi-menu"></span> Menu
@@ -44,7 +45,7 @@
 
 		  	<div class="collapse navbar-collapse" id="ftco-nav">
 			<ul class="navbar-nav ml-auto">
-			  	<li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+			  	<li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
 			  	<li class="nav-item"><a href="menu.html" class="nav-link">Menu</a></li>
 			  	<li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
 			  	<li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
@@ -65,9 +66,9 @@
 			  
 			  <?php if (isset($_SESSION['status']) && $_SESSION['status'] == 'loggedin') : ?>
 			  
-				<?php echo 'Logged in as : ' . $_SESSION['name'] . '  |'; ?>
+				<?php echo '<p style="colour:white"> Logged in as : ' . $_SESSION['name'] . '<p>'; ?>
 					<form name='form3' id='form1' method="post">
-						<input style="width:95%;height:75%;size:100%;" class="btn btn-danger custom" type="submit" value="Logout" formaction="logout.php">
+						<input style="margin-left:5px;width:100%;height:100%;size:100%;margin-top:10px;;" class="btn btn-danger custom" type="submit" value="Logout" formaction="logout.php">
 					</form>
 			  
 				<?php else : ?>
@@ -75,12 +76,12 @@
 				
 					<div style="flex-grow: 1;text-align: center;">
 					<li class="nav-item">
-					<button style="margin-right:5px;width:100%;height:100%;size:100%;margin-top:10px;" class="btn btn-success" onclick="document.getElementById('login_form').style.display='block';document.getElementById('book').style.display = 'none';"> Login </button></li>
+					<button style="margin-right:5px;width:100%;height:100%;size:100%;margin-top:10px;" class="btn btn-success" onclick="document.getElementById('login_form').style.display='block';invis()"> Login </button></li>
 					</div>
 
 					<div style="flex-grow: 1;text-align: center;">
 					<li class="nav-item">
-					<button style="margin-left:5px;width:100%;height:100%;size:100%;margin-top:10px;" class="btn btn-danger" onclick="document.getElementById('sign_up_form').style.display='block';document.getElementById('book').style.display = 'none';"> Register </button></li>
+					<button style="margin-left:5px;width:100%;height:100%;size:100%;margin-top:10px;" class="btn btn-danger" onclick="document.getElementById('sign_up_form').style.display='block';invis()"> Register </button></li>
 					</div>
 					
 				</div>
@@ -90,8 +91,8 @@
 			</ul>
 			</div>
 	  	</div>
-
 	</nav>
+</section>
     <!-- END nav -->
 
 	<!-- Register -->
@@ -190,8 +191,8 @@
       </div>
     </section>
 
-    <section class="ftco-intro">
-    	<div class="container-wrap">
+    <section class="ftco-intro" id='hide'>
+    	<div class="container-wrap" id='book'>
     		<div class="wrap d-md-flex align-items-xl-end">
 	    		<div class="info">
 	    			<div class="row no-gutters">
@@ -219,7 +220,7 @@
 	    			</div>
 	    		</div>
 
-	    		<div class="book p-4" >
+	    		<div class="book p-4" id="book">
 	    			<h3>Book a Table</h3>
 	    			<form action="#" class="appointment-form">
 	    				<div class="d-md-flex">
@@ -235,14 +236,14 @@
 		    					<div class="input-wrap">
 		            		<div class="icon"><span class="ion-md-calendar"></span></div>
 		            		<input type="text" class="form-control appointment_date" placeholder="Date">
-	            		</div>
-		    				</div>
-		    				<div class="form-group ml-md-4">
-		    					<div class="input-wrap">
-		            		<div class="icon"><span class="ion-ios-clock"></span></div>
+	            			</div>
+						</div>
+						<div class="form-group ml-md-4">
+							<div class="input-wrap">
+		            			<div class="icon"><span class="ion-ios-clock"></span></div>
 		            		<input type="text" class="form-control appointment_time" placeholder="Time">
-	            		</div>
-		    				</div>
+	            			</div>
+						</div>
 		    				<div class="form-group ml-md-4">
 		    					<input type="text" class="form-control" placeholder="Phone">
 		    				</div>
@@ -919,9 +920,14 @@
 		document.getElementById('sign_up_form').style.display = "none";
 		document.getElementById('login_form').style.display = "none";
 		document.getElementById('book').style.display = 'block';
-		
+		document.getElementById('hide').removeAttribute("hidden")}
 	}
+
+	function invis(){
+		document.getElementById('book').style.display = 'none';
+		document.getElementById('hide').setAttribute('hidden', 'hidden');
 	}
+
 	</script>
 
   <!-- loader -->
