@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 10, 2023 at 06:55 PM
+-- Generation Time: Nov 11, 2023 at 12:06 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -30,16 +30,18 @@ SET time_zone = "+00:00";
 CREATE TABLE `menu_details` (
   `Item_Name` varchar(128) NOT NULL,
   `Item_Cost` double NOT NULL,
-  `Item_Availability` int(1) NOT NULL
+  `Item_Availability` int(1) NOT NULL,
+  `Img_Link` varchar(128) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Dumping data for table `menu_details`
 --
 
-INSERT INTO `menu_details` (`Item_Name`, `Item_Cost`, `Item_Availability`) VALUES
-('Espresso Shot', 5.45, 1),
-('Gluten-Free Brownie', 3.45, 0);
+INSERT INTO `menu_details` (`Item_Name`, `Item_Cost`, `Item_Availability`, `Img_Link`) VALUES
+('Espresso Shot', 5.45, 1, 'Espresso_Shot.jpg'),
+('Gluten-Free Brownie', 3.45, 0, 'Gluten_Free_Brownie.jpg'),
+('Ice Milk Tea', 5, 1, 'Ice_Milk_Tea.jpg');
 
 -- --------------------------------------------------------
 
