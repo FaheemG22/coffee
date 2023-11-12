@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 11, 2023 at 12:06 AM
+-- Generation Time: Nov 12, 2023 at 03:34 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -29,6 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `menu_details` (
   `Item_Name` varchar(128) NOT NULL,
+  `Item_Type` varchar(32) NOT NULL,
   `Item_Cost` double NOT NULL,
   `Item_Availability` int(1) NOT NULL,
   `Img_Link` varchar(128) NOT NULL
@@ -38,10 +39,44 @@ CREATE TABLE `menu_details` (
 -- Dumping data for table `menu_details`
 --
 
-INSERT INTO `menu_details` (`Item_Name`, `Item_Cost`, `Item_Availability`, `Img_Link`) VALUES
-('Espresso Shot', 5.45, 1, 'Espresso_Shot.jpg'),
-('Gluten-Free Brownie', 3.45, 0, 'Gluten_Free_Brownie.jpg'),
-('Ice Milk Tea', 5, 1, 'Ice_Milk_Tea.jpg');
+INSERT INTO `menu_details` (`Item_Name`, `Item_Type`, `Item_Cost`, `Item_Availability`, `Img_Link`) VALUES
+('Blackcurrant Tart', 'Dessert', 3.45, 1, 'Blackcurrant_Tart.jpg'),
+('Breakfast Burger', 'Main', 6.5, 1, 'Breakfast_Burger.jpg'),
+('Brunch_Shake_Trio', 'Dessert', 15.75, 1, 'Brunch_Shake_Trio.jpg'),
+('Burger', 'Main', 6.5, 1, 'Burger.jpg'),
+('Cheesy Butter Pasta', 'Main', 6, 1, 'Cheesy_Butter_Pasta.jpg'),
+('Coffee', 'Coffee', 5.5, 1, 'Coffee.jpg'),
+('Cosmopolitan', 'Drink', 5.5, 1, 'Cosmopolitan.jpg'),
+('Espresso Shot', 'Coffee', 5.45, 1, 'Espresso_Shot.jpg'),
+('Fruit Tart', 'Dessert', 4.25, 1, 'Fruit_Tart.jpg'),
+('Gluten-Free Brownie', 'Dessert', 3.45, 1, 'Gluten_Free_Brownie.jpg'),
+('Grilled Salmon', 'Main', 7, 1, 'Grilled_Salmon.jpg'),
+('Ice Milk Tea', 'Drink', 5, 1, 'Ice_Milk_Tea.jpg'),
+('Irish Red Ale', 'Drink', 3, 1, 'Irish_Red_Ale.jpg'),
+('Kids Dessert', 'Dessert', 2.45, 1, 'Kids_Dessert.jpg'),
+('King Prawn', 'Appetiser', 2.95, 1, 'King_Prawn.jpg'),
+('Large Pancakes', 'Dessert', 7.5, 1, 'Large_Pancakes.jpg'),
+('Latte', 'Coffee', 4.25, 1, 'Latte.jpg'),
+('Margherita Pizza', 'Main', 5.25, 1, 'Margherita_Pizza.jpg'),
+('Mimosa', 'Drink', 3.75, 1, 'Mimosa.jpg'),
+('Negroni', 'Drink', 3.85, 1, 'Negroni.jpg'),
+('Party For Five', 'Drink', 18.25, 1, 'Party_For_Five.jpg'),
+('Pepperoni Pizza', 'Main', 6.25, 1, 'Pepperoni_Pizza.jpg'),
+('Rack Of Lamb', 'Main', 13.45, 1, 'Rack_Of_Lamb.jpg'),
+('Rose & French Raspberry Cheesecake', 'Dessert', 7, 1, 'Rose_&_French_Raspberry_Cheesecake.jpg'),
+('Seasonal Wine', 'Drink', 5.75, 1, 'Seasonal_Wine.jpg'),
+('Small Pancakes', 'Dessert', 5.5, 1, 'Small_Pancakes.jpg'),
+('Sparkling Metropoliton', 'Drink', 5.5, 1, 'Sparkling_Metropoliton.jpg'),
+('Sparkling Mojito', 'Drink', 5.25, 1, 'Sparkling_Mojito.jpg'),
+('Spicy Shrimp Rice', 'Main', 6.8, 1, 'Spicy_Shrimp_Rice.jpg'),
+('Spicy Shrimp Salad', 'Appetiser', 3.5, 1, 'Spicy_Shrimp_Salad.jpg'),
+('Steak & Gravy', 'Main', 8.25, 1, 'Steak_&_Gravy.jpg'),
+('Strong Latte', 'Coffee', 4.25, 1, 'Strong_Latte.jpg'),
+('Summer Smorgasbord', 'Appetiser', 7.45, 1, 'Summer_Smorgasbord.jpg'),
+('T-bone & Wine Sauce', 'Main', 16.25, 1, 'T-bone_&_Wine_Sauce.jpg'),
+('Vegan Misota', 'Appetiser', 2, 1, 'Vegan_Misota.jpg'),
+('Vegetarian Burger', 'Main', 6, 1, 'Vegetarian_Burger.jpg'),
+('Vegetarian Pizza', 'Main', 5.75, 1, 'Vegetarian_Pizza.jpg');
 
 -- --------------------------------------------------------
 

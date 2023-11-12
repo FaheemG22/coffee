@@ -54,6 +54,7 @@
     		<div class="wrap d-md-flex align-items-xl-end">
 	    		<div class="info">
 	    			<div class="row no-gutters">
+
 	    				<div class="col-md-4 d-flex ftco-animate">
 	    					<div class="icon"><span class="icon-phone"></span></div>
 	    					<div class="text">
@@ -124,6 +125,7 @@
         <div class="row">
         	<div class="col-md-6 mb-5 pb-3">
         		<h3 class="mb-5 heading-pricing ftco-animate">Starter</h3>
+				
         		<div class="pricing-entry d-flex ftco-animate">
         			<div class="img" style="background-image: url(images/dish-1.jpg);"></div>
         			<div class="desc pl-3">
@@ -134,8 +136,10 @@
 	        			<div class="d-block">
 	        				<p>A small river named Duden flows by their place and supplies</p>
 	        			</div>
+						
         			</div>
         		</div>
+				
         		<div class="pricing-entry d-flex ftco-animate">
         			<div class="img" style="background-image: url(images/dish-2.jpg);"></div>
         			<div class="desc pl-3">
@@ -174,8 +178,10 @@
         		</div>
         	</div>
 
+			
         	<div class="col-md-6 mb-5 pb-3">
         		<h3 class="mb-5 heading-pricing ftco-animate">Main Dish</h3>
+
         		<div class="pricing-entry d-flex ftco-animate">
         			<div class="img" style="background-image: url(images/dish-5.jpg);"></div>
         			<div class="desc pl-3">
