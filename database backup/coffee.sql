@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 12, 2023 at 03:34 AM
+-- Generation Time: Nov 14, 2023 at 08:45 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -44,20 +44,20 @@ INSERT INTO `menu_details` (`Item_Name`, `Item_Type`, `Item_Cost`, `Item_Availab
 ('Breakfast Burger', 'Main', 6.5, 1, 'Breakfast_Burger.jpg'),
 ('Brunch_Shake_Trio', 'Dessert', 15.75, 1, 'Brunch_Shake_Trio.jpg'),
 ('Burger', 'Main', 6.5, 1, 'Burger.jpg'),
-('Cheesy Butter Pasta', 'Main', 6, 1, 'Cheesy_Butter_Pasta.jpg'),
+('Cheesy Butter Pasta', 'Main', 6, 0, 'Cheesy_Butter_Pasta.jpg'),
 ('Coffee', 'Coffee', 5.5, 1, 'Coffee.jpg'),
 ('Cosmopolitan', 'Drink', 5.5, 1, 'Cosmopolitan.jpg'),
 ('Espresso Shot', 'Coffee', 5.45, 1, 'Espresso_Shot.jpg'),
 ('Fruit Tart', 'Dessert', 4.25, 1, 'Fruit_Tart.jpg'),
-('Gluten-Free Brownie', 'Dessert', 3.45, 1, 'Gluten_Free_Brownie.jpg'),
+('Gluten-Free Brownie', 'Dessert', 3.45, 0, 'Gluten_Free_Brownie.jpg'),
 ('Grilled Salmon', 'Main', 7, 1, 'Grilled_Salmon.jpg'),
 ('Ice Milk Tea', 'Drink', 5, 1, 'Ice_Milk_Tea.jpg'),
 ('Irish Red Ale', 'Drink', 3, 1, 'Irish_Red_Ale.jpg'),
-('Kids Dessert', 'Dessert', 2.45, 1, 'Kids_Dessert.jpg'),
+('Kids Dessert', 'Dessert', 2.45, 0, 'Kids_Dessert.jpg'),
 ('King Prawn', 'Appetiser', 2.95, 1, 'King_Prawn.jpg'),
 ('Large Pancakes', 'Dessert', 7.5, 1, 'Large_Pancakes.jpg'),
 ('Latte', 'Coffee', 4.25, 1, 'Latte.jpg'),
-('Margherita Pizza', 'Main', 5.25, 1, 'Margherita_Pizza.jpg'),
+('Margherita Pizza', 'Main', 5.25, 0, 'Margherita_Pizza.jpg'),
 ('Mimosa', 'Drink', 3.75, 1, 'Mimosa.jpg'),
 ('Negroni', 'Drink', 3.85, 1, 'Negroni.jpg'),
 ('Party For Five', 'Drink', 18.25, 1, 'Party_For_Five.jpg'),
@@ -68,7 +68,7 @@ INSERT INTO `menu_details` (`Item_Name`, `Item_Type`, `Item_Cost`, `Item_Availab
 ('Small Pancakes', 'Dessert', 5.5, 1, 'Small_Pancakes.jpg'),
 ('Sparkling Metropoliton', 'Drink', 5.5, 1, 'Sparkling_Metropoliton.jpg'),
 ('Sparkling Mojito', 'Drink', 5.25, 1, 'Sparkling_Mojito.jpg'),
-('Spicy Shrimp Rice', 'Main', 6.8, 1, 'Spicy_Shrimp_Rice.jpg'),
+('Spicy Shrimp Rice', 'Main', 6.8, 0, 'Spicy_Shrimp_Rice.jpg'),
 ('Spicy Shrimp Salad', 'Appetiser', 3.5, 1, 'Spicy_Shrimp_Salad.jpg'),
 ('Steak & Gravy', 'Main', 8.25, 1, 'Steak_&_Gravy.jpg'),
 ('Strong Latte', 'Coffee', 4.25, 1, 'Strong_Latte.jpg'),

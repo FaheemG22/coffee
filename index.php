@@ -145,7 +145,7 @@
 	    				</div>
 	    				<div class="d-md-flex">
 	    					<div class="form-group">
-		              <textarea name="" id="" cols="30" rows="2" class="form-control" placeholder="Message"></textarea>
+		              <textarea name="" cols="30" rows="2" class="form-control" placeholder="Message"></textarea>
 		            </div>
 		            <div class="form-group ml-md-4">
 		              <input type="submit" value="Appointment" class="btn btn-white py-3 px-4">
@@ -227,22 +227,22 @@
     				<div class="row">
     					<div class="col-md-6">
     						<div class="menu-entry">
-		    					<a href="#" class="img" style="background-image: url(images/menu-1.jpg);" alt='Coffee'></a>
+		    					<a href="#" class="img" style="background-image: url(images/Espresso_Shot.jpg);" alt='Coffee'></a>
 		    				</div>
     					</div>
     					<div class="col-md-6">
     						<div class="menu-entry mt-lg-4">
-		    					<a href="#" class="img" style="background-image: url(images/menu-2.jpg);" alt='Coffee'></a>
+		    					<a href="#" class="img" style="background-image: url(images/Coffee.jpg);" alt='Coffee'></a>
 		    				</div>
     					</div>
     					<div class="col-md-6">
     						<div class="menu-entry">
-		    					<a href="#" class="img" style="background-image: url(images/menu-3.jpg);" alt='Coffee'></a>
+		    					<a href="#" class="img" style="background-image: url(images/bg_2.jpg);" alt='Coffee'></a>
 		    				</div>
     					</div>
     					<div class="col-md-6">
     						<div class="menu-entry mt-lg-4">
-		    					<a href="#" class="img" style="background-image: url(images/menu-4.jpg);" alt='Coffee'></a>
+		    					<a href="#" class="img" style="background-image: url(images/Latte.jpg);" alt='Coffee'></a>
 		    				</div>
     					</div>
     				</div>
@@ -311,7 +311,7 @@
         <div class="row">
         	<div class="col-md-3">
         		<div class="menu-entry">
-    					<a href="#" class="img" style="background-image: url(images/menu-1.jpg);" alt='Coffee'></a>
+    					<a href="#" class="img" style="background-image: url(images/Coffee.jpg);" alt='Coffee'></a>
     					<div class="text text-center pt-4">
     						<h3><a href="#">Coffee Capuccino</a></h3>
     						<p>A small river named Duden flows by their place and supplies</p>
@@ -322,7 +322,7 @@
         	</div>
         	<div class="col-md-3">
         		<div class="menu-entry">
-    					<a href="#" class="img" style="background-image: url(images/menu-2.jpg);" alt='Coffee'></a>
+    					<a href="#" class="img" style="background-image: url(images/Espresso_Shot.jpg);" alt='Coffee'></a>
     					<div class="text text-center pt-4">
     						<h3><a href="#">Coffee Capuccino</a></h3>
     						<p>A small river named Duden flows by their place and supplies</p>
@@ -333,7 +333,7 @@
         	</div>
         	<div class="col-md-3">
         		<div class="menu-entry">
-    					<a href="#" class="img" style="background-image: url(images/menu-3.jpg);" alt='Coffee'></a>
+    					<a href="#" class="img" style="background-image: url(images/bg_2.jpg);" alt='Coffee'></a>
     					<div class="text text-center pt-4">
     						<h3><a href="#">Coffee Capuccino</a></h3>
     						<p>A small river named Duden flows by their place and supplies</p>
@@ -344,7 +344,7 @@
         	</div>
         	<div class="col-md-3">
         		<div class="menu-entry">
-    					<a href="#" class="img" style="background-image: url(images/menu-4.jpg);" alt='Coffee'></a>
+    					<a href="#" class="img" style="background-image: url(images/Latte.jpg);" alt='Coffee'></a>
     					<div class="text text-center pt-4">
     						<h3><a href="#">Coffee Capuccino</a></h3>
     						<p>A small river named Duden flows by their place and supplies</p>
@@ -421,9 +421,9 @@
 		              	<div class="row">
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/dish-1.jpg);" alt='Coffee'></a>
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/Burger.jpg);" alt='Coffee'></a>
 		              				<div class="text">
-		              					<h3><a href="#">Grilled Beef</a></h3>
+		              					<h3><a href="#">Burger</a></h3>
 		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
 		              					<p class="price"><span>$2.90</span></p>
 		              					<p><a href="#" class="btn btn-primary btn-outline-primary">Add to cart</a></p>
@@ -432,9 +432,9 @@
 		              		</div>
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/dish-2.jpg);" alt='Coffee'></a>
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/Breakfast_Burger.jpg);" alt='Coffee'></a>
 		              				<div class="text">
-		              					<h3><a href="#">Grilled Beef</a></h3>
+		              					<h3><a href="#">Breakfast Burger</a></h3>
 		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
 		              					<p class="price"><span>$2.90</span></p>
 		              					<p><a href="#" class="btn btn-primary btn-outline-primary">Add to cart</a></p>
@@ -443,9 +443,9 @@
 		              		</div>
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/dish-3.jpg);" alt='Coffee'></a>
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/Grilled_Salmon.jpg);" alt='Coffee'></a>
 		              				<div class="text">
-		              					<h3><a href="#">Grilled Beef</a></h3>
+		              					<h3><a href="#">Grilled Salmon</a></h3>
 		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
 		              					<p class="price"><span>$2.90</span></p>
 		              					<p><a href="#" class="btn btn-primary btn-outline-primary">Add to cart</a></p>
@@ -459,9 +459,9 @@
 		                <div class="row">
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/drink-1.jpg);" alt='Coffee'></a>
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/Sparkling_Mojito.jpg);" alt='Coffee'></a>
 		              				<div class="text">
-		              					<h3><a href="#">Lemonade Juice</a></h3>
+		              					<h3><a href="#">Sparkling Mojito</a></h3>
 		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
 		              					<p class="price"><span>$2.90</span></p>
 		              					<p><a href="#" class="btn btn-primary btn-outline-primary">Add to cart</a></p>
@@ -470,20 +470,20 @@
 		              		</div>
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/drink-2.jpg);" alt='Coffee'></a>
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/Cosmopolitan.jpg);" alt='Coffee'></a>
 		              				<div class="text">
-		              					<h3><a href="#">Pineapple Juice</a></h3>
+		              					<h3><a href="#">Cosmopolitan</a></h3>
 		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
 		              					<p class="price"><span>$2.90</span></p>
-		              					<p><a href="#" class="btn btn-primary btn-outline-primary">Add to cart</a></p>
+		              					<p><a href="#" class="btn btn-2primary btn-outline-primary">Add to cart</a></p>
 		              				</div>
 		              			</div>
 		              		</div>
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/drink-3.jpg);" alt='Coffee'></a>
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/Mimosa.jpg);" alt='Coffee'></a>
 		              				<div class="text">
-		              					<h3><a href="#">Soda Drinks</a></h3>
+		              					<h3><a href="#">Mimosa</a></h3>
 		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
 		              					<p class="price"><span>$2.90</span></p>
 		              					<p><a href="#" class="btn btn-primary btn-outline-primary">Add to cart</a></p>
@@ -558,7 +558,7 @@
 	              </blockquote>
 	              <div class="author d-flex mt-4">
 	                <div class="image mr-3 align-self-center">
-	                  <img src="images/person_1.jpg"  alt='Coffee'>
+	                  <img src="images/person_3.jpg"  alt='Coffee'>
 	                </div>
 	                <div class="name align-self-center">Louise Kelly <span class="position">Illustrator Designer</span></div>
 	              </div>
@@ -631,7 +631,7 @@
         <div class="row d-flex">
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
+              <a href="blog-single.html" class="block-20" style="background-image: url('images/Vegetarian_Pizza.jpg');">
               </a>
               <div class="text py-4 d-block">
               	<div class="meta">
@@ -646,7 +646,7 @@
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
+              <a href="blog-single.html" class="block-20" style="background-image: url('images/Spaghetti.jpg');">
               </a>
               <div class="text py-4 d-block">
               	<div class="meta">
@@ -661,7 +661,7 @@
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
+              <a href="blog-single.html" class="block-20" style="background-image: url('images/Cheesy_Butter_Pasta.jpg');">
               </a>
               <div class="text py-4 d-block">
               	<div class="meta">
@@ -717,7 +717,7 @@
 	    				</div>
 	    				<div class="d-md-flex">
 	    					<div class="form-group">
-		              <textarea name="" id="" cols="30" rows="2" class="form-control" placeholder="Message"></textarea>
+		              <textarea name="" cols="30" rows="2" class="form-control" placeholder="Message"></textarea>
 		            </div>
 		            <div class="form-group ml-md-4">
 		              <input type="submit" value="Appointment" class="btn btn-primary py-3 px-4">
@@ -748,7 +748,7 @@
             <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">Recent Blog</h2>
               <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);" alt='Coffee'></a>
+                <a class="blog-img mr-4" style="background-image: url(images/Cheesy_Butter_Pasta.jpg);" alt='Coffee'></a>
                 <div class="text">
                   <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
                   <div class="meta">
@@ -759,7 +759,7 @@
                 </div>
               </div>
               <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);" alt='Coffee'></a>
+                <a class="blog-img mr-4" style="background-image: url(images/Vegetarian_Pizza.jpg);" alt='Coffee'></a>
                 <div class="text">
                   <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
                   <div class="meta">
@@ -828,9 +828,10 @@
   <script src="js/bootstrap-datepicker.js"></script>
   <script src="js/jquery.timepicker.min.js"></script>
   <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2354.3224838806163!2d-1.792900923238188!3d53.837127972435695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487be46a3f7a61ef%3A0x2303f9426e9cc182!2sShipley%20College!5e0!3m2!1sen!2suk!4v1699968685739!5m2!1sen!2suk" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+
     
   </body>
 </html>
