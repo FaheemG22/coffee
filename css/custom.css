@@ -20,7 +20,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
 
 /* Full-width input fields */
-.modal input[type=text], .modal input[type=password], .modal input[type=number], .modal input[type=value] {
+.modal input[type=text], .modal input[type=password], .modal input[type=number], .modal input[type=value], .modal option {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -32,10 +32,14 @@ body {font-family: Arial, Helvetica, sans-serif;}
 }
 
 /* Add a background color when the inputs get focus */
-.modal input[type=text]:focus, .modal input[type=password], .modal input[type=number], .modal input[type=email]:focus {
+.modal input[type=text]:focus, .modal input[type=password], .modal input[type=number], .modal input[type=email]:focus, .modal option {
   background-color: #D2D2D2;
   outline: none;
   border-radius:10px ;
+}
+
+option:hover {
+  background-color: #d2d2d28e;
 }
 
 /* Set a style for all buttons */
@@ -104,7 +108,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: #474e5d;
+  background-color: rgba(71, 78, 93, 0.56);
   padding-top: 50px;
 }
 
@@ -112,7 +116,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
 .modal-content {
   max-width: 1200px;
   color:#d2d2e0;
-  background-color: #212529;
+  background-image: url("../images/bg_4.jpg");
+  /*background-color: #212529;*/
   border-radius:20px;
   margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
   border: 1px solid #888;
@@ -146,8 +151,4 @@ hr {
 
 
 /* Change styles for cancel button and signup button on extra small screens */
-@media screen and (max-width: 300px) {
-  .cancelbtn, .signupbtn {
-     width: 100%;
-  }
-}
+@media screen and (max-width: 300px) {.cancelbtn, .signupbtn {width: 100%;}}

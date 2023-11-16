@@ -36,7 +36,7 @@
 </form>
 
 <div>
-<button style="margin-left:5px;width:100%;height:100%;size:100%;margin-top:10px;" class="btn btn-danger" onclick="document.getElementById('sign_up_form').style.display='block';invis()"> Register </button></li>
+<button class="btn btn-danger" onclick="document.getElementById('sign_up_form').style.display='block';invis()"> Register </button></li>
 </div>
 
 <div name='form1' id="sign_up_form" class="modal">
@@ -49,6 +49,16 @@
 		
 		<input type="text" name='Name' placeholder="Dish Name" required>
 		<input type="text" name='Type' placeholder="Dish Type" required>
+		
+
+		<select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+		<option selected>Open this select menu</option>
+		<option value="1">One</option>
+		<option value="2">Two</option>
+		<option value="3">Three</option>
+		</select>
+		
+		
         <input type="number" name='Price' placeholder="Dish Price" required>
         <div class="mb-3">
         <input class="form-control form-control-sm" id="fileToUpload" required type="file">
