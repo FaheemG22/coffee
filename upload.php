@@ -1,6 +1,5 @@
-<!--
-?php
-/*
+<?php
+
 $target_dir = "uploads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
@@ -47,49 +46,40 @@ if ($uploadOk == 0) {
     $U_N = $_POST['Name'];
     $U_T = $_POST['Type'];
     $U_P = $_POST['Price'];
+    $temp = explode(".", $_FILES["fileToUpload"]["name"]);
+    $newFileName = str_replace(' ','_',$U_N);
+  if (file_exists($target_dir . $newFileName . '.' . $temp[1])) {
+    echo "Sorry, file already exists.";
+    $uploadOk = 0;
+    
+  }
 
-  if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+  elseif (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
     
     $host = 'localhost';
     $S_user = 'root';
     $S_password = '';
     $db ='user_details';
 
-    echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
     
+   
+    if ($uploadOk == 0 ){
+      unlink("test.txt");
+    }
 
+    else {
+    rename($target_file, $target_dir . $newFileName . '.' . $temp[1]);
+    echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.<br>";
     #$sql = "INSERT INTO menu_details (Item_Name, Item_Type, Item_Cost, Item_Availability, Img_Link) 
     #VALUES ('$U_N','$U_T','$U_P','1','')";
     #$conn = mysqli_connect($host,$S_user,$S_password,$db);
     #$result = mysqli_query($conn,$sql);
+    }
+
+
 
   } else {
     echo "Sorry, there was an error uploading your file.";
-  }
-}
-?>
-*/
--->
-
-<?php
-  $U_N = $_POST['Name'] ;
-
-  if(isset ($_FILES["fileToUpload"])){
-
-    $target_dir = "uploads/";
-    $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-    $temp = explode(".", $_FILES["fileToUpload"]["name"]);
-
-    $newFileName = str_replace(' ','_',$U_N);
-    
-    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-      
-      rename($target_file, $target_dir . $newFileName . '.' . $temp[1]);
-      echo $newFileName;
-      
-      echo $U_N . '.' . $temp[1] . ' Successfully uploaded';
-    }else {
-    echo'File Upload failed it already exists';
   }
 }
 ?>
