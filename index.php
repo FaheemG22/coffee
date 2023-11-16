@@ -2,7 +2,7 @@
 
 <html lang="en">
   	<head>
-    <title>Coffee - Free Bootstrap 4 Template by Colorlib</title>
+    <title>Bean & Brew - Home </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -798,9 +798,9 @@
         <div class="row">
           <div class="col-md-12 text-center">
 
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	<p>
   Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+	</p>
           </div>
         </div>
       </div>
@@ -828,7 +828,7 @@
   <script src="js/bootstrap-datepicker.js"></script>
   <script src="js/jquery.timepicker.min.js"></script>
   <script src="js/scrollax.min.js"></script>
-  <script src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2354.3224838806163!2d-1.792900923238188!3d53.837127972435695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487be46a3f7a61ef%3A0x2303f9426e9cc182!2sShipley%20College!5e0!3m2!1sen!2suk!4v1699968685739!5m2!1sen!2suk" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&v=weekly"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
 

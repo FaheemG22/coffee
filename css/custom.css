@@ -107,7 +107,7 @@ option:hover {
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
+  overflow: hidden; /* Enable scroll if needed */
   background-color: rgba(71, 78, 93, 0.56);
   padding-top: 50px;
 }
@@ -117,7 +117,6 @@ option:hover {
   max-width: 1200px;
   color:#d2d2e0;
   background-image: url("../images/bg_4.jpg");
-  /*background-color: #212529;*/
   border-radius:20px;
   margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
   border: 1px solid #888;
@@ -148,6 +147,8 @@ hr {
 }
 
 /* Clear floats */
+
+
 
 
 /* Change styles for cancel button and signup button on extra small screens */
