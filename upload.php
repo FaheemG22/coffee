@@ -1,4 +1,6 @@
-<?php
+<!--
+?php
+/*
 $target_dir = "uploads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
@@ -30,7 +32,7 @@ if ($_FILES["fileToUpload"]["size"] > 500000) {
 
 // Allow certain file formats
 if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-&& $imageFileType != "gif" ) {
+&& $imageFileType != "gif" && $imageFileType != "jfif" && $imageFileType != "webp" ) {
   echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
   $uploadOk = 0;
 }
@@ -40,12 +42,12 @@ if ($uploadOk == 0) {
   echo "Sorry, your file was not uploaded.";
 // if everything is ok, try to upload file
 } else {
-    $temp = explode(".", $_FILES["file"]["name"]);
+    $temp = explode(".", $_FILES["fileToUpload"]["name"]);
 
     $U_N = $_POST['Name'];
     $U_T = $_POST['Type'];
     $U_P = $_POST['Price'];
-    $newfilename = $U_N . end($temp);
+
   if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
     
     $host = 'localhost';
@@ -55,13 +57,39 @@ if ($uploadOk == 0) {
 
     echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
     
-    $sql = "INSERT INTO menu_details (Item_Name, Item_Type, Item_Cost, Item_Availability, Img_Link) 
-    VALUES ('$U_N','$U_T','$U_P','1','')";
-    $conn = mysqli_connect($host,$S_user,$S_password,$db);
-    $result = mysqli_query($conn,$sql);
+
+    #$sql = "INSERT INTO menu_details (Item_Name, Item_Type, Item_Cost, Item_Availability, Img_Link) 
+    #VALUES ('$U_N','$U_T','$U_P','1','')";
+    #$conn = mysqli_connect($host,$S_user,$S_password,$db);
+    #$result = mysqli_query($conn,$sql);
 
   } else {
     echo "Sorry, there was an error uploading your file.";
+  }
+}
+?>
+*/
+-->
+
+<?php
+  $U_N = $_POST['Name'] ;
+
+  if(isset ($_FILES["fileToUpload"])){
+
+    $target_dir = "uploads/";
+    $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+    $temp = explode(".", $_FILES["fileToUpload"]["name"]);
+
+    $newFileName = str_replace(' ','_',$U_N);
+    
+    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+      
+      rename($target_file, $target_dir . $newFileName . '.' . $temp[1]);
+      echo $newFileName;
+      
+      echo $U_N . '.' . $temp[1] . ' Successfully uploaded';
+    }else {
+    echo'File Upload failed it already exists';
   }
 }
 ?>

@@ -47,20 +47,21 @@
 		
 		<div>	
 		<select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" style="width: 30%;height:50px;" name='Type'>
-		<option value="Main" class="text-white bg-dark">Dish Type</option>
-		<option value="Appetiser" class="text-white bg-dark">One</option>
-		<option value="Drink" class="text-white bg-dark">Two</option>
-		<option value="Coffee" class="text-white bg-dark">Three</option>
+		<option value="Main" class="text-white bg-dark">Main</option>
+		<option value="Appetiser" class="text-white bg-dark">Appetiser</option>
+		<option value="Drink" class="text-white bg-dark">Drink</option>
+		<option value="Coffee" class="text-white bg-dark">Coffee</option>
 		</select>
 		
 		</div>
-		<input class="form-control form-control-bg bg-dark text-white" id="fileToUpload" required type="file">
+		<input class="form-control form-control-bg bg-dark text-white" id="fileToUpload" name="fileToUpload" required type="file">
         </div>
+		<input type="submit">
 
 		<p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 		<div class="clearfix">
 			<button type="button" onclick="document.getElementById('sign_up_form').style.display='none'" class="cancelbtn">Cancel</button>
-			<button type="submit" class="signupbtn" formaction="submit.php">Submit</button>
+			<button type="submit" class="signupbtn" formaction="upload.php">Submit</button>
 		</div>
 		</div>
 	</form>
