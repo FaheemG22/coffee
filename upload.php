@@ -1,6 +1,6 @@
 <?php
 
-$target_dir = "uploads/";
+$target_dir = "images/menu/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
@@ -15,12 +15,6 @@ if(isset($_POST["submit"])) {
     echo "File is not an image.";
     $uploadOk = 0;
   }
-}
-
-// Check if file already exists
-if (file_exists($target_file)) {
-  echo "Sorry, file already exists.";
-  $uploadOk = 0;
 }
 
 // Check file size
@@ -43,11 +37,12 @@ if ($uploadOk == 0) {
 } else {
     $temp = explode(".", $_FILES["fileToUpload"]["name"]);
 
-    $U_N = $_POST['Name'];
-    $U_T = $_POST['Type'];
-    $U_P = $_POST['Price'];
+    $Dish_Name = $_POST['Name'];
+    $Dish_Type = $_POST['Type'];
+    $Dish_Price = $_POST['Price'];
+    $Dish_Availability = '1';
     $temp = explode(".", $_FILES["fileToUpload"]["name"]);
-    $newFileName = str_replace(' ','_',$U_N);
+    $newFileName = str_replace(' ','_',$Dish_Name);
   if (file_exists($target_dir . $newFileName . '.' . $temp[1])) {
     echo "Sorry, file already exists.";
     $uploadOk = 0;
@@ -59,24 +54,26 @@ if ($uploadOk == 0) {
     $host = 'localhost';
     $S_user = 'root';
     $S_password = '';
-    $db ='user_details';
-
-    
+    $db ='coffee';
    
     if ($uploadOk == 0 ){
       unlink("test.txt");
     }
 
     else {
-    rename($target_file, $target_dir . $newFileName . '.' . $temp[1]);
-    echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.<br>";
-    #$sql = "INSERT INTO menu_details (Item_Name, Item_Type, Item_Cost, Item_Availability, Img_Link) 
-    #VALUES ('$U_N','$U_T','$U_P','1','')";
-    #$conn = mysqli_connect($host,$S_user,$S_password,$db);
-    #$result = mysqli_query($conn,$sql);
+    $newTargetFile = $target_dir . $newFileName . '.' . $temp[1];
+    rename($target_file, $newTargetFile);
+    echo "The file ". htmlspecialchars( basename($newTargetFile)). " has been uploaded.<br>";
+    
+    $tempName = $newFileName . '.' . $temp[1]; 
+
+    $sql = "INSERT INTO `menu_details`(`Item_Name`, `Item_Type`, `Item_Cost`, `Item_Availability`, `Img_Link`) 
+    VALUES ('$Dish_Name','$Dish_Type','$Dish_Price','$Dish_Availability','$tempName')";
+    
+    $conn = mysqli_connect($host,$S_user,$S_password,$db);
+    $result = mysqli_query($conn,$sql);
+    header("location:$last");
     }
-
-
 
   } else {
     echo "Sorry, there was an error uploading your file.";

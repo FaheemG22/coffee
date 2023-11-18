@@ -3,34 +3,7 @@
 <html lang="en">
   	<head>
     <title>Bean & Brew - Home </title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
-	
-	<link rel="stylesheet" href="css/custom.css">
-	<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-	<link rel="stylesheet" href="css/animate.css">
 
-	
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-	<link rel="stylesheet" href="css/magnific-popup.css">
-	
-	<link rel="stylesheet" href="css/aos.css">
-	
-	<link rel="stylesheet" href="css/ionicons.min.css">
-	
-	<link rel="stylesheet" href="css/bootstrap-datepicker.css">
-	<link rel="stylesheet" href="css/jquery.timepicker.css">
-	
-	
-	<link rel="stylesheet" href="css/flaticon.css">
-	<link rel="stylesheet" href="css/icomoon.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/custom.css">
 
 	</head>
 	<body>
@@ -227,12 +200,12 @@
     				<div class="row">
     					<div class="col-md-6">
     						<div class="menu-entry">
-		    					<a href="#" class="img" style="background-image: url(images/Espresso_Shot.jpg);" alt='Coffee'></a>
+		    					<a href="#" class="img" style="background-image: url(images/menu/Espresso_Shot.jpg);" alt='Coffee'></a>
 		    				</div>
     					</div>
     					<div class="col-md-6">
     						<div class="menu-entry mt-lg-4">
-		    					<a href="#" class="img" style="background-image: url(images/Coffee.jpg);" alt='Coffee'></a>
+		    					<a href="#" class="img" style="background-image: url(images/menu/Coffee.jpg);" alt='Coffee'></a>
 		    				</div>
     					</div>
     					<div class="col-md-6">
@@ -242,7 +215,7 @@
     					</div>
     					<div class="col-md-6">
     						<div class="menu-entry mt-lg-4">
-		    					<a href="#" class="img" style="background-image: url(images/Latte.jpg);" alt='Coffee'></a>
+		    					<a href="#" class="img" style="background-image: url(images/menu/Latte.jpg);" alt='Coffee'></a>
 		    				</div>
     					</div>
     				</div>
@@ -311,7 +284,7 @@
         <div class="row">
         	<div class="col-md-3">
         		<div class="menu-entry">
-    					<a href="#" class="img" style="background-image: url(images/Coffee.jpg);" alt='Coffee'></a>
+    					<a href="#" class="img" style="background-image: url(images/menu/Coffee.jpg);" alt='Coffee'></a>
     					<div class="text text-center pt-4">
     						<h3><a href="#">Coffee Capuccino</a></h3>
     						<p>A small river named Duden flows by their place and supplies</p>
@@ -322,7 +295,7 @@
         	</div>
         	<div class="col-md-3">
         		<div class="menu-entry">
-    					<a href="#" class="img" style="background-image: url(images/Espresso_Shot.jpg);" alt='Coffee'></a>
+    					<a href="#" class="img" style="background-image: url(images/menu/Espresso_Shot.jpg);" alt='Coffee'></a>
     					<div class="text text-center pt-4">
     						<h3><a href="#">Coffee Capuccino</a></h3>
     						<p>A small river named Duden flows by their place and supplies</p>
@@ -344,7 +317,7 @@
         	</div>
         	<div class="col-md-3">
         		<div class="menu-entry">
-    					<a href="#" class="img" style="background-image: url(images/Latte.jpg);" alt='Coffee'></a>
+    					<a href="#" class="img" style="background-image: url(images/menu/Latte.jpg);" alt='Coffee'></a>
     					<div class="text text-center pt-4">
     						<h3><a href="#">Coffee Capuccino</a></h3>
     						<p>A small river named Duden flows by their place and supplies</p>
@@ -421,7 +394,7 @@
 		              	<div class="row">
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/Burger.jpg);" alt='Coffee'></a>
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/menu/Burger.jpg);" alt='Coffee'></a>
 		              				<div class="text">
 		              					<h3><a href="#">Burger</a></h3>
 		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -432,7 +405,7 @@
 		              		</div>
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/Breakfast_Burger.jpg);" alt='Coffee'></a>
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/menu/Breakfast_Burger.jpg);" alt='Coffee'></a>
 		              				<div class="text">
 		              					<h3><a href="#">Breakfast Burger</a></h3>
 		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -443,7 +416,7 @@
 		              		</div>
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/Grilled_Salmon.jpg);" alt='Coffee'></a>
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/menu/Grilled_Salmon.jpg);" alt='Coffee'></a>
 		              				<div class="text">
 		              					<h3><a href="#">Grilled Salmon</a></h3>
 		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -459,7 +432,7 @@
 		                <div class="row">
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/Sparkling_Mojito.jpg);" alt='Coffee'></a>
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/menu/Sparkling_Mojito.jpg);" alt='Coffee'></a>
 		              				<div class="text">
 		              					<h3><a href="#">Sparkling Mojito</a></h3>
 		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -470,7 +443,7 @@
 		              		</div>
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/Cosmopolitan.jpg);" alt='Coffee'></a>
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/menu/Cosmopolitan.jpg);" alt='Coffee'></a>
 		              				<div class="text">
 		              					<h3><a href="#">Cosmopolitan</a></h3>
 		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -481,7 +454,7 @@
 		              		</div>
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/Mimosa.jpg);" alt='Coffee'></a>
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/menu/Mimosa.jpg);" alt='Coffee'></a>
 		              				<div class="text">
 		              					<h3><a href="#">Mimosa</a></h3>
 		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -497,7 +470,7 @@
 		                <div class="row">
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/dessert-1.jpg);" alt='Coffee'></a>
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/menu/Rose_&_French_Raspberry_Cheesecake.jpg);" alt='Coffee'></a>
 		              				<div class="text">
 		              					<h3><a href="#">Hot Cake Honey</a></h3>
 		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -508,7 +481,7 @@
 		              		</div>
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/dessert-2.jpg);" alt='Coffee'></a>
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/menu/Large_Pancakes.jpg);" alt='Coffee'></a>
 		              				<div class="text">
 		              					<h3><a href="#">Hot Cake Honey</a></h3>
 		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -519,7 +492,7 @@
 		              		</div>
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/dessert-3.jpg);" alt='Coffee'></a>
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/menu/Kids_Dessert.jpg);" alt='Coffee'></a>
 		              				<div class="text">
 		              					<h3><a href="#">Hot Cake Honey</a></h3>
 		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -631,7 +604,7 @@
         <div class="row d-flex">
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/Vegetarian_Pizza.jpg');">
+              <a href="blog-single.html" class="block-20" style="background-image: url('images/menu/Vegetarian_Pizza.jpg');">
               </a>
               <div class="text py-4 d-block">
               	<div class="meta">
@@ -646,7 +619,7 @@
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/Spaghetti.jpg');">
+              <a href="blog-single.html" class="block-20" style="background-image: url('images/menu/Spaghetti.jpg');">
               </a>
               <div class="text py-4 d-block">
               	<div class="meta">
@@ -661,7 +634,7 @@
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/Cheesy_Butter_Pasta.jpg');">
+              <a href="blog-single.html" class="block-20" style="background-image: url('images/menu/Cheesy_Butter_Pasta.jpg');">
               </a>
               <div class="text py-4 d-block">
               	<div class="meta">
@@ -748,7 +721,7 @@
             <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">Recent Blog</h2>
               <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/Cheesy_Butter_Pasta.jpg);" alt='Coffee'></a>
+                <a class="blog-img mr-4" style="background-image: url(images/menu/Cheesy_Butter_Pasta.jpg);" alt='Coffee'></a>
                 <div class="text">
                   <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
                   <div class="meta">
@@ -759,7 +732,7 @@
                 </div>
               </div>
               <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/Vegetarian_Pizza.jpg);" alt='Coffee'></a>
+                <a class="blog-img mr-4" style="background-image: url(images/menu/Vegetarian_Pizza.jpg);" alt='Coffee'></a>
                 <div class="text">
                   <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
                   <div class="meta">

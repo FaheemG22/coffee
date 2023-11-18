@@ -29,20 +29,27 @@ $sql = "SELECT * FROM user_details
 WHERE UserEmail='$email' 
 AND UserPassword = '$password'";
 $result = mysqli_query($conn, $sql);
+$hash = password_hash($password,PASSWORD_DEFAULT); 
 
-if (mysqli_num_rows($result) == 1) {
-$_SESSION["status"] = 'loggedin';
-$sql = "SELECT UserName FROM user_details 
-WHERE UserEmail='$email' 
-AND UserPassword = '$password'";
-$result = mysqli_query($conn, $sql);
+if ( (mysqli_num_rows($result) == 1) && (password_verify($password, $hash_password)) )
+{
 
-while($row = $result->fetch_assoc()) {
-	$_SESSION["name"] = $row["UserName"];
-	}
-$last = $_SERVER['HTTP_REFERER'];
-header("location:$last");
-exit;  
+	$sql = "SELECT UserName FROM user_details WHERE UserEmail='$email' AND UserPassword = '$hash_password'";
+	$result = mysqli_query($conn, $sql);
+
+	while($row = $result->fetch_assoc()) {
+		$verify = password_verify($password, $hash_password); 
+		if ($verify) { 
+			$_SESSION["name"] = $row["UserName"];
+			$_SESSION["status"] = 'loggedin'; 
+		} else { 
+			echo 'Incorrect Password!'; 
+		} 
+
+		}
+	$last=$_SERVER['HTTP_REFERER'];
+	header("location:$last");
+	exit;  
 
 }
 else {
