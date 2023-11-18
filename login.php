@@ -1,6 +1,5 @@
 <!DOCTYPE html>	
 <HTML>
-<?php include "./header.php"?>
 <head>
 </head>
 
@@ -29,7 +28,7 @@ $sql = "SELECT * FROM user_details
 WHERE UserEmail='$email' 
 AND UserPassword = '$password'";
 $result = mysqli_query($conn, $sql);
-$hash = password_hash($password,PASSWORD_DEFAULT); 
+$hash_password = password_hash($password,PASSWORD_DEFAULT); 
 
 if ( (mysqli_num_rows($result) == 1) && (password_verify($password, $hash_password)) )
 {
