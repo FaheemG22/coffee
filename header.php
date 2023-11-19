@@ -1,4 +1,31 @@
-<?php session_start();function active($currect_page){$url_array =  explode('/', $_SERVER['REQUEST_URI']) ;$url = end($url_array);  if($currect_page == $url){echo 'active';}}?>
+<?php session_start();function active($currect_page){$url_array =  explode('/', $_SERVER['REQUEST_URI']) ;$url = end($url_array);  if($currect_page == $url){echo 'active';}}
+$host = 'localhost';
+$S_user = 'root';
+$S_password = '';
+$db ='coffee';
+
+
+if (isset($_SESSION['SecretP'])){
+	$password = $_SESSION['SecretP'];
+	$email = $_SESSION['SecretE'];
+	$conn  = mysqli_connect($host, $S_user, $S_password, $db);
+	$sql = "SELECT * FROM user_details Where UserEmail= '$email'";
+	$result = mysqli_query($conn, $sql);
+
+				while ($row = $result -> fetch_row()) {
+					$db_password = $row[3];
+					$verify =password_verify($password, $db_password);
+					if ($_SESSION['SecretE'] = 'admin@gmail.com'){
+						$admin = true;
+					}
+			}
+		
+}
+
+
+
+
+?>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="description"content="this is just a test login system all in the header"><meta name="application-name" content="Login/Logout"><meta name="theme-color" content="black">
 
@@ -34,12 +61,22 @@
 			  <li class="nav-item <?php active('contact.php');?>"><a href="contact.php" class="nav-link">Contact</a></li>
 			  <li class="nav-item cart"><a href="cart.php" class="nav-link"><span class="icon icon-shopping_cart"></span><span class="bag d-flex justify-content-center align-items-center"><small>1</small></span></a></li>
 			  
-			  <?php if (isset($_SESSION['status']) && $_SESSION['status'] == 'loggedin') : ?>
-			  
-				<?php echo '<p style="colour:white"> Logged in as : ' . $_SESSION['name'] . '<p>'; ?>
+			  <?php if (isset($verify) && ($verify)): ?>
+				<div style="display: flex;">
+		
+				
+					<div style="flex-grow: 1;text-align: center;">
+					<li class="nav-item">
+					<?php echo '<p style="color:white;margin-right:30px;width:100%;height:100%;size:100%;margin-top:10px;"> Welcome back : ' . $_SESSION['SecretN'] . '<p>'; ?></li>
+					</div>
+
+					
+					<div style="flex-grow: 1;text-align: center;">
+					<li class="nav-item">
 					<form name='form3' id='form1' method="post">
-						<input style="margin-left:5px;width:100%;height:100%;size:100%;margin-top:10px;;" class="btn btn-danger custom" type="submit" value="Logout" formaction="logout.php">
-					</form>
+							<input style="margin-left:5px;width:100%;height:100%;size:100%;margin-top:10px;" class="btn btn-danger custom" type="submit" value="Logout" formaction="logout.php">
+					</form></li>
+					</div>
 			  
 				<?php else : ?>
 				<div style="display: flex;">

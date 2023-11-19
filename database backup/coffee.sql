@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 16, 2023 at 08:46 PM
+-- Generation Time: Nov 19, 2023 at 09:24 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -49,6 +49,7 @@ INSERT INTO `menu_details` (`Item_Name`, `Item_Type`, `Item_Cost`, `Item_Availab
 ('Cosmopolitan', 'Drink', 5.5, 1, 'Cosmopolitan.jpg'),
 ('Espresso Shot', 'Coffee', 5.45, 1, 'Espresso_Shot.jpg'),
 ('Fruit Tart', 'Dessert', 4.25, 1, 'Fruit_Tart.jpg'),
+('Garlic Knots', 'Appetiser', 2.5, 1, 'Garlic_Knots.jpg'),
 ('Gluten-Free Brownie', 'Dessert', 3.45, 0, 'Gluten_Free_Brownie.jpg'),
 ('Grilled Salmon', 'Main', 7, 1, 'Grilled_Salmon.jpg'),
 ('Ice Milk Tea', 'Drink', 5, 1, 'Ice_Milk_Tea.jpg'),
@@ -112,7 +113,7 @@ CREATE TABLE `user_details` (
   `UserID` int(128) NOT NULL,
   `UserEmail` varchar(64) NOT NULL,
   `UserName` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `UserPassword` varchar(32) NOT NULL
+  `UserPassword` varchar(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
@@ -120,7 +121,9 @@ CREATE TABLE `user_details` (
 --
 
 INSERT INTO `user_details` (`UserID`, `UserEmail`, `UserName`, `UserPassword`) VALUES
-(1, '125843@shipley.ac.uk', 'Faheem', 'Password');
+(13, 'Faheem@gmail.com', 'Faheem', '$2y$10$/bpkGaQGRI1gzs3/KimLmu12Bai/EFk8OY38Mb/KJu636Q2mAhlHq'),
+(14, 'fred@gmail.com', 'fred', '$2y$10$LXGfUvcFaU1Zg1jOKSy2yeYJfZuAxvTvkqEcnWGi/ydDU8hz0dCD6'),
+(15, 'admin@gmail.com', 'admin', '$2y$10$kpVN/dUtsx93nvxkJTE8OuqAwUxoNDyOxkVChDh20k4F/F53qVDwi');
 
 --
 -- Indexes for dumped tables
@@ -160,7 +163,7 @@ ALTER TABLE `order_details`
 -- AUTO_INCREMENT for table `user_details`
 --
 ALTER TABLE `user_details`
-  MODIFY `UserID` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `UserID` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
