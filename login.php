@@ -33,6 +33,7 @@ try{
 		
 		if (password_verify($password, $db_password)) 
 		{ 
+			$_SESSION["SecretI"] = $row[0];
 			$_SESSION["SecretN"] = $row[2];
 			$_SESSION["SecretE"] = $email;
 			$_SESSION['SecretP'] = $password;

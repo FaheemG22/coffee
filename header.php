@@ -6,8 +6,10 @@ $db ='coffee';
 
 
 if (isset($_SESSION['SecretP'])){
+	
 	$password = $_SESSION['SecretP'];
 	$email = $_SESSION['SecretE'];
+	$user_ID = $_SESSION["SecretI"];
 	$conn  = mysqli_connect($host, $S_user, $S_password, $db);
 	$sql = "SELECT * FROM user_details Where UserEmail= '$email'";
 	$result = mysqli_query($conn, $sql);
@@ -64,7 +66,6 @@ if (isset($_SESSION['SecretP'])){
 			  <?php if (isset($verify) && ($verify)): ?>
 				<div style="display: flex;">
 		
-				
 					<div style="flex-grow: 1;text-align: center;">
 					<li class="nav-item">
 					<?php echo '<p style="color:white;margin-right:30px;width:100%;height:100%;size:100%;margin-top:10px;"> Welcome back : ' . $_SESSION['SecretN'] . '<p>'; ?></li>
@@ -74,8 +75,8 @@ if (isset($_SESSION['SecretP'])){
 					<div style="flex-grow: 1;text-align: center;">
 					<li class="nav-item">
 					<form name='form3' id='form1' method="post">
-							<input style="margin-left:5px;width:100%;height:100%;size:100%;margin-top:10px;" class="btn btn-danger custom" type="submit" value="Logout" formaction="logout.php">
-					</form></li>
+					<input style="margin-left:5px;width:100%;height:100%;size:100%;margin-top:10px;" class="btn btn-danger custom" type="submit" value="Logout" formaction="logout.php"></li>
+					</form>
 					</div>
 			  
 				<?php else : ?>

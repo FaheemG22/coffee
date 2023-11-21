@@ -73,7 +73,7 @@ if($conn){}
           <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
           <div class="clearfix">
             <button type="button" onclick="document.getElementById("new_item_form").style.display="none"" class="cancelbtn">Cancel</button>
-            <button type="submit" class="signupbtn" formaction="upload.php">Submit</button>
+            <button type="submit" class="signupbtn" formaction="menu_upload.php">Submit</button>
           </div>
           </div>
         </form>

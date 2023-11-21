@@ -27,16 +27,50 @@
       </div>
     </section>
 
-    <section class="ftco-section ftco-services">
-    	<div class="container">
+  <section class="ftco-section">
+  <div class="container">
+  <div name='form1'  class="modal" style="display:block;position:static;background-color: rgba(0, 0, 0, 0.00);">
+  <form autocomplete="on"  class="modal-content" method="post" action="upload.php" enctype="multipart/form-data" style="width:100%;min-width:250px;min-height:500px;">
+          <div class="container">
+          <div class="heading-section ftco-animate ">
+          <span class="subheading">Upload</span>
+          <br>
+	        	<span class="subheading">Your Own Cake</span>
+	        </div>
+          <br>
+          <hr>
+          
+          <div class="mb-3">
+          <input type="hidden" name="UserID" value="<?php echo $user_ID ?>">
+          <input type="text" name="Name" placeholder="Name your Cake" required>
+          <div>	
 
-    	</div>
+          <img id="blah" src="#" alt="your image" style="width: 30%;height: auto;">
+          </div>
+          <input class="form-control form-control-bg bg-dark text-white" id="fileToUpload" name="fileToUpload" required type="file">
+          
+          </div>
+
+          <p>By Uploading An Image You Agree To Our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+          <div class="clearfix">
+            <button type="submit" class="signupbtn" formaction="upload.php" style='width:100%;'>Submit</button>
+          </div>
+          </div>
+        </form>
+      </div>
+      <script>
+      blah.style.display='none';
+      fileToUpload.onchange = evt => {
+        const [file] = fileToUpload.files
+        if (file) {
+          blah.src = URL.createObjectURL(file)
+          blah.style.display='block';
+        }
+      }
+      </script>
     </section>
-
-
     <?php include "./footer.php"?>
   
-
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
   </body>
