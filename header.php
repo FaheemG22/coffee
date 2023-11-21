@@ -44,7 +44,7 @@ if (isset($_SESSION['SecretP'])){
 			<ul class="navbar-nav ml-auto">
 			  	<li class="nav-item <?php active('index.php');?><?php active('');?>"><a href="index.php" class="nav-link">Home</a></li>
 			  	<li class="nav-item <?php active('menu.php');?>"><a href="menu.php" class="nav-link">Menu</a></li>
-			  	<li class="nav-item <?php active('services.php');?>"><a href="services.php" class="nav-link">Services</a></li>
+			  	<li class="nav-item <?php active('rate_my_cake.php');?>"><a href="rate_my_cake.php" class="nav-link">Rate My Cake</a></li>
 			  	<li class="nav-item <?php active('blog.php');?>"><a href="blog.php" class="nav-link">Blog</a></li>
 			  	<li class="nav-item <?php active('about.php');?>"><a href="about.php" class="nav-link">About</a></li>
 			  	<li class="nav-item dropdown">
