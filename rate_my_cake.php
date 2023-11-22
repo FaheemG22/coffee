@@ -7,7 +7,7 @@
     
   </head>
   <body>
-  <?php include "./header.php"?>
+
     <!-- END nav -->
 
     <section class="home-slider owl-carousel">
