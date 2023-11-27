@@ -91,116 +91,6 @@ if($conn){}
       <button class="btn btn-danger" onclick="items()"> Add new item to menu </button></li>
       </div>';
     }
-    echo'<section class="ftco-section">
-  <div class="container">
-    <div class="row">
-    ';
-  
-    echo'
-    <div class="col-md-6 mb-5 pb-3">
-    <h3 class="mb-5 heading-pricing ftco-animate">Drinks</h3>';
-    
-        $sql = "SELECT * FROM `menu_details` WHERE Item_Type = 'Drink'"; 
-        $result = mysqli_query($conn, $sql);
-        while($row = $result->fetch_assoc()) {
-            echo'<div class="pricing-entry d-flex ftco-animate">
-                    <div class="img" style="background-image: url(images/menu/'. $row['Img_Link'] .');"></div>
-                    <div class="desc pl-3">
-                    <div class="d-flex text align-items-center">
-                        <h3><span>'. htmlspecialchars($row['Item_Name']) .'</span></h3>
-                        <span class="price">£' . htmlspecialchars($row['Item_Cost']) . '</span>
-                    </div>
-
-                    
-                    </div>
-                    </div>';                
-        }
-    echo'</div>';
-
-    echo'
-    <div class="col-md-6 mb-5 pb-3">
-    <h3 class="mb-5 heading-pricing ftco-animate">Mains</h3>';
-    
-        $sql = "SELECT * FROM `menu_details` WHERE Item_Type = 'Main' AND Item_Availability = 1"; 
-        $result = mysqli_query($conn, $sql);
-        while($row = $result->fetch_assoc()) {
-            echo'<div class="pricing-entry d-flex ftco-animate">
-                    <div class="img" style="background-image: url(images/menu/'. $row['Img_Link'] .');"></div>
-                    <div class="desc pl-3">
-                    <div class="d-flex text align-items-center">
-                        <h3><span>'. htmlspecialchars($row['Item_Name']) .'</span></h3>
-                        <span class="price">£' . htmlspecialchars($row['Item_Cost']) . '</span>
-                    </div>
-
-                    
-                    </div>
-                    </div>';                
-        }
-        echo'</div>';
-
-    echo'
-    <div class="col-md-6 mb-5 pb-3">
-    <h3 class="mb-5 heading-pricing ftco-animate">Desserts</h3>';
-    
-        $sql = "SELECT * FROM `menu_details` WHERE Item_Type = 'Dessert' AND Item_Availability = 1"; 
-        $result = mysqli_query($conn, $sql);
-        while($row = $result->fetch_assoc()) {
-            echo'<div class="pricing-entry d-flex ftco-animate">
-                    <div class="img" style="background-image: url(images/menu/'. $row['Img_Link'] .');"></div>
-                    <div class="desc pl-3">
-                    <div class="d-flex text align-items-center">
-                        <h3><span>'. htmlspecialchars($row['Item_Name']) .'</span></h3>
-                        <span class="price">£' . htmlspecialchars($row['Item_Cost']) . '</span>
-                    </div>
-
-                    
-                    </div>
-                    </div>';                
-        }
-        echo'</div>';
-
-    echo'
-    <div class="col-md-6 mb-5 pb-3">
-    <h3 class="mb-5 heading-pricing ftco-animate">Appetisers</h3>';
-    
-        $sql = "SELECT * FROM `menu_details` WHERE Item_Type = 'Appetiser' AND Item_Availability = 1"; 
-        $result = mysqli_query($conn, $sql);
-        while($row = $result->fetch_assoc()) {
-            echo'<div class="pricing-entry d-flex ftco-animate">
-          <div class="img" style="background-image: url(images/menu/'. $row['Img_Link'] .');"></div>
-          <div class="desc pl-3">
-            <div class="d-flex text align-items-center">
-              <h3><span>'. htmlspecialchars($row['Item_Name']) .'</span></h3>
-              <span class="price">£' . htmlspecialchars($row['Item_Cost']) . '</span>
-            </div>
-
-        
-          </div>
-            </div>';                
-        }
-        echo'</div>';
-
-            echo'
-            <div class="col-md-6 mb-5 pb-3">
-            <h3 class="mb-5 heading-pricing ftco-animate">Coffee</h3>';
-            
-                $sql = "SELECT * FROM `menu_details` WHERE Item_Type = 'Coffee' AND Item_Availability = 1"; 
-                $result = mysqli_query($conn, $sql);
-                while($row = $result->fetch_assoc()) {
-                    echo'<div class="pricing-entry d-flex ftco-animate">
-                            <div class="img" style="background-image: url(images/menu/'. $row['Img_Link'] .');"></div>
-                            <div class="desc pl-3">
-                            <div class="d-flex text align-items-center">
-                                <h3><span>'. htmlspecialchars($row['Item_Name']) .'</span></h3>
-                                <span class="price">£' . htmlspecialchars($row['Item_Cost']) . '</span>
-                            </div>
-
-                            
-                            </div>
-                            </div>';                
-                }
-                echo'</div>';
-    echo'</section>';
     }
 
 
@@ -209,6 +99,7 @@ if($conn){}
 }
 
 ?>
+<span id="refresh" class="ftco-animate"></span>
     <footer class="ftco-footer ftco-section img">
     	<div class="overlay"></div>
       <div class="container">
@@ -290,7 +181,18 @@ if($conn){}
 
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
+<script>
+function showHint() {
+    const xmlhttp = new XMLHttpRequest();
+    xmlhttp.onload = function() {
+      document.getElementById("refresh").innerHTML = this.responseText;
+    }
+  xmlhttp.open("GET", "menu_update.php?q=");
+  xmlhttp.send();
+  }
+showHint()
+setInterval(showHint,5000)
+</script>
 <script>function items(){document.getElementById('new_item_form').style.display='block';invis()}</script><script src="js/jquery.min.js"></script><script src="js/jquery-migrate-3.0.1.min.js"></script><script src="js/popper.min.js"></script><script src="js/bootstrap.min.js"></script><script src="js/jquery.easing.1.3.js"></script><script src="js/jquery.waypoints.min.js"></script><script src="js/jquery.stellar.min.js"></script><script src="js/owl.carousel.min.js"></script><script src="js/jquery.magnific-popup.min.js"></script><script src="js/aos.js"></script><script src="js/jquery.animateNumber.min.js"></script><script src="js/bootstrap-datepicker.js"></script><script src="js/jquery.timepicker.min.js"></script><script src="js/scrollax.min.js"></script><script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&v=weekly"></script><script src="js/google-map.js"></script><script src="js/main.js"></script>
     
   </body>
