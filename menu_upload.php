@@ -72,6 +72,7 @@ if ($uploadOk == 0) {
     
     $conn = mysqli_connect($host,$S_user,$S_password,$db);
     $result = mysqli_query($conn,$sql);
+    $last = $_SERVER['HTTP_REFERER'];
     header("location:$last");
     }
 
