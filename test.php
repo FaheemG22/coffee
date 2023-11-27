@@ -1,20 +1,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="description"content="this is just a test login system all in the header"><meta name="application-name" content="Login/Logout"><meta name="theme-color" content="black">
 
 <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet"><link rel="stylesheet" href="css/custom.css"><link rel="stylesheet" href="css/open-iconic-bootstrap.min.css"><link rel="stylesheet" href="css/animate.css"><link rel="stylesheet" href="css/owl.carousel.min.css"><link rel="stylesheet" href="css/owl.theme.default.min.css"><link rel="stylesheet" href="css/magnific-popup.css"><link rel="stylesheet" href="css/aos.css"><link rel="stylesheet" href="css/ionicons.min.css"><link rel="stylesheet" href="css/bootstrap-datepicker.css"><link rel="stylesheet" href="css/jquery.timepicker.css"><link rel="stylesheet" href="css/flaticon.css"><link rel="stylesheet" href="css/icomoon.css"><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/custom.css">
-<p>Start typing a name in the input field below:</p>
-<p>Suggestions: <span id="txtHint"></span></p>
+<span id="refresh"></span>
 
 <script>
 function showHint() {
     const xmlhttp = new XMLHttpRequest();
     xmlhttp.onload = function() {
-      document.getElementById("txtHint").innerHTML = this.responseText;
+      document.getElementById("refresh").innerHTML = this.responseText;
     }
-  xmlhttp.open("GET", "test3.php?q=");
+  xmlhttp.open("GET", "menu_update.php?q=");
   xmlhttp.send();
   }
 showHint()
-setInterval(showHint,1)
+setInterval(showHint,5000)
 </script>
 
 <script>window.onclick = function(event) {if (event.target == document.getElementById('sign_up_form') || event.target == document.getElementById('login_form') || event.target == document.getElementById('new_item_form')){document.getElementById('sign_up_form').style.display = "none";document.getElementById('login_form').style.display = "none";document.getElementById('new_item_form').style.display='none';document.getElementById('book').style.display = 'block';document.getElementById('hide').removeAttribute("hidden")}};function vis(){document.getElementById('hide').removeAttribute("hidden");document.getElementById('book').style.display = 'block';}function invis(){document.getElementById('book').style.display = 'none';document.getElementById('hide').setAttribute('hidden', 'hidden');}</script>
