@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Coffee - Free Bootstrap 4 Template by Colorlib</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+    <meta charset="utf-8">    
   </head>
   <body>
   <?php include "./header.php"?>
@@ -44,7 +43,6 @@
             <hr>
             
             <div class="mb-3">
-            <input type="hidden" name="UserID" value="<?php echo $user_ID ?>">
             <input type="text" name="Name" placeholder="Name your Cake" required>
             <div>	
 
