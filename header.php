@@ -5,7 +5,7 @@ $S_password = '';
 $db ='coffee';
 
 
-if (isset($_SESSION['SecretP'])){
+if ( isset($_SESSION['SecretP']) && isset($_SESSION['SecretE']) && isset($_SESSION['SecretI']) && isset($_SESSION['SecretN']) ){
 	
 	$password = $_SESSION['SecretP'];
 	$email = $_SESSION['SecretE'];
@@ -138,5 +138,21 @@ if (isset($_SESSION['SecretP'])){
 	</form>
 	</div>
 
-<script>window.onclick = function(event) {if (event.target == document.getElementById('sign_up_form') || event.target == document.getElementById('login_form') || event.target == document.getElementById('new_item_form')){document.getElementById('sign_up_form').style.display = "none";document.getElementById('login_form').style.display = "none";document.getElementById('new_item_form').style.display='none';document.getElementById('book').style.display = 'block';document.getElementById('hide').removeAttribute("hidden")}};function vis(){document.getElementById('hide').removeAttribute("hidden");document.getElementById('book').style.display = 'block';}function invis(){document.getElementById('book').style.display = 'none';document.getElementById('hide').setAttribute('hidden', 'hidden');}</script>
+<script>
+window.onclick = function(event) {
+	if (event.target == document.getElementById('sign_up_form') || event.target == document.getElementById('login_form') || event.target == document.getElementById('new_item_form'))
+	{
+		document.getElementById('sign_up_form').style.display = "none";
+		document.getElementById('login_form').style.display = "none";
+		try{
+		document.getElementById('new_item_form').style.display='none';
+		}
+		catch(err) {
+		}
+		vis()
+	}};
+
+function vis(){document.getElementById('book').style.display = 'block'; document.getElementById('hide').removeAttribute("hidden")}
+function invis(){document.getElementById('book').style.display = 'none'; document.getElementById('hide').setAttribute("hidden", 'hidden')}
+</script>
 	
