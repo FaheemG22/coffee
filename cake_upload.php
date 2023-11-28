@@ -1,6 +1,6 @@
 <?php
-
-$target_dir = "images/menu/";
+session_start();
+$target_dir = "images/cakerate/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
@@ -38,9 +38,13 @@ if ($uploadOk == 0) {
     $temp = explode(".", $_FILES["fileToUpload"]["name"]);
 
     $cake_Name = $_POST['Name'];
-    $userID = $_POST['UserID'];
+    $userID = $_SESSION['SecretI'];
     $temp = explode(".", $_FILES["fileToUpload"]["name"]);
-    $newFileName = str_replace(' ','_',$cake_Name);
+    $newCakeName = str_replace('>',' ',$cake_Name);
+    $newCakeName = str_replace('SQL','no',$newCakeName);
+    
+    $newFileName = password_hash($newCakeName,PASSWORD_DEFAULT); 
+
   if (file_exists($target_dir . $newFileName . '.' . $temp[1])) {
     echo "Sorry, file already exists.";
     $uploadOk = 0;
@@ -59,18 +63,24 @@ if ($uploadOk == 0) {
     }
 
     else {
-    $newTargetFile = $target_dir . $newFileName . '.' . $temp[1];
-    rename($target_file, $newTargetFile);
-    echo "The file ". htmlspecialchars( basename($newTargetFile)). " has been uploaded.<br>";
-    
-    $tempName = $newFileName . '.' . $temp[1]; 
 
-    $sql = "INSERT INTO `cake_details`(`UserID`, `CakeName`) 
-    VALUES ('$userID','$cake_Name')";
+    $newTargetFile = $target_dir . $newFileName . '.' . $temp[1];
+    $img_link = $newFileName . '.' . $temp[1];
     
-    $conn = mysqli_connect($host,$S_user,$S_password,$db);
-    $result = mysqli_query($conn,$sql);
-    header("location:$last");
+    if (file_exists($target_file)){
+      rename($target_file, $newTargetFile);
+      echo "The file ". htmlspecialchars( basename($newTargetFile)). " has been uploaded.<br>";
+      
+      $tempName = $newFileName . '.' . $temp[1]; 
+      
+      $sql = "INSERT INTO `cake_details`(`User_ID`, `Cake_Name`, `Img_Link`) 
+      VALUES ('$userID','$newCakeName ','$img_link')";
+      
+      $conn = mysqli_connect($host,$S_user,$S_password,$db);
+      $result = mysqli_query($conn,$sql);
+      $last = $_SERVER['HTTP_REFERER'];
+      header("location:$last");
+    }
     }
 
   } else {
