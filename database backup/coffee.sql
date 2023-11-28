@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 19, 2023 at 09:24 PM
+-- Generation Time: Nov 28, 2023 at 09:23 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -20,6 +20,27 @@ SET time_zone = "+00:00";
 --
 -- Database: `coffee`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cake_details`
+--
+
+CREATE TABLE `cake_details` (
+  `Cake_ID` int(128) NOT NULL,
+  `User_ID` int(128) NOT NULL,
+  `Cake_Name` varchar(64) NOT NULL,
+  `Img_Link` varchar(128) NOT NULL,
+  `Date_Time` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Dumping data for table `cake_details`
+--
+
+INSERT INTO `cake_details` (`Cake_ID`, `User_ID`, `Cake_Name`, `Img_Link`, `Date_Time`) VALUES
+(7, 17, 'asda ', '$2y$10$Q6Zr7ixmUlrVVeO5Zfrf2ulNeJR7MSyyOFL2K39ir.sl5H4SnHoG2.jpg', '2023-11-28 14:56:09');
 
 -- --------------------------------------------------------
 
@@ -42,7 +63,7 @@ CREATE TABLE `menu_details` (
 INSERT INTO `menu_details` (`Item_Name`, `Item_Type`, `Item_Cost`, `Item_Availability`, `Img_Link`) VALUES
 ('Blackcurrant Tart', 'Dessert', 3.45, 1, 'Blackcurrant_Tart.jpg'),
 ('Breakfast Burger', 'Main', 6.5, 1, 'Breakfast_Burger.jpg'),
-('Brunch_Shake_Trio', 'Dessert', 15.75, 1, 'Brunch_Shake_Trio.jpg'),
+('Brunch Shake Trio', 'Dessert', 15.75, 1, 'Brunch_Shake_Trio.jpg'),
 ('Burger', 'Main', 6.5, 1, 'Burger.jpg'),
 ('Cheesy Butter Pasta', 'Main', 6, 0, 'Cheesy_Butter_Pasta.jpg'),
 ('Coffee', 'Coffee', 5.5, 1, 'Coffee.jpg'),
@@ -123,11 +144,18 @@ CREATE TABLE `user_details` (
 INSERT INTO `user_details` (`UserID`, `UserEmail`, `UserName`, `UserPassword`) VALUES
 (13, 'Faheem@gmail.com', 'Faheem', '$2y$10$/bpkGaQGRI1gzs3/KimLmu12Bai/EFk8OY38Mb/KJu636Q2mAhlHq'),
 (14, 'fred@gmail.com', 'fred', '$2y$10$LXGfUvcFaU1Zg1jOKSy2yeYJfZuAxvTvkqEcnWGi/ydDU8hz0dCD6'),
-(15, 'admin@gmail.com', 'admin', '$2y$10$kpVN/dUtsx93nvxkJTE8OuqAwUxoNDyOxkVChDh20k4F/F53qVDwi');
+(16, 'admin@admin.com', 'mohammed', '$2y$10$JnE1z3WwCuMlnDC9oXLDl.DNjAjPnB8TDig.xRW357AE1gMUigNdC'),
+(17, 'admin@gmail.com', 'Admin', '$2y$10$ZVYuslHDHboqIiwRAtT10.dIL9pxTMFRFRFrztTgZq3eGLf9wTmLy');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `cake_details`
+--
+ALTER TABLE `cake_details`
+  ADD PRIMARY KEY (`Cake_ID`);
 
 --
 -- Indexes for table `menu_details`
@@ -154,6 +182,12 @@ ALTER TABLE `user_details`
 --
 
 --
+-- AUTO_INCREMENT for table `cake_details`
+--
+ALTER TABLE `cake_details`
+  MODIFY `Cake_ID` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
 -- AUTO_INCREMENT for table `order_details`
 --
 ALTER TABLE `order_details`
@@ -163,7 +197,7 @@ ALTER TABLE `order_details`
 -- AUTO_INCREMENT for table `user_details`
 --
 ALTER TABLE `user_details`
-  MODIFY `UserID` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `UserID` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
