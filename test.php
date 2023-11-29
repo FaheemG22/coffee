@@ -53,46 +53,25 @@
       </div>
 </section>
     
-<section class="ftco-section" style="background-image:url(images/bg_6.jpg);">
+<section class="ftco-section ftco-animate" style="background-image:url(images/bg_6.jpg);">
 <!--
   filter: blur(8px);-webkit-filter: blur(8px);
 -->
-    <div class="container ftco-animate">
-      <div class="modal" style="display:block;position:static;background-color: rgba(0, 0, 0, 0.00);">
-        <div class="modal-content border rounded-3" style="width:100%;min-width:250px;min-height:500px;">
-          <div class="container">
-              <div class="heading-section ftco-animate ">
-              
-                <div>
-                <span class="subheading text-center">Temp Cake Name</span>
-                </div>
-                
-                <div>
-                <span class="subheading text-center" style="font-size:35px;margin-top:20px;">2023-11-28 14:56:09</span>
-                </div>
-              </div>
-          
-              <hr>
+  <div id="refresh">
 
-              <img src="images/about.jpg" class="img-thumbnail rounded mx-auto d-block" style="height:min-content;">
-            
-              <hr>
-              <div class="ftco-animate d-flex justify-content-center" style="margin-top:-40px;">
-                <div class="heart"></div>
-              </div>
-
-              <div class="ftco-animate d-flex justify-content-center">
-                <p class="text-center" style="border: 2px solid white;border-radius: 15px;margin-top:-25px;height:50px;width:150px;font-size:x-large;"> 100 Likes</p>
-              </div>
-
-          </div>            
-        </div>
-      </div>
-    </div>
+  </div>
       </section>
 <!--heart styling and js-->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>function showHint() {const xmlhttp = new XMLHttpRequest();xmlhttp.onload = function() {document.getElementById("refresh").innerHTML = this.responseText;}
+xmlhttp.open("GET", "cake_update.php?q=");
+xmlhttp.send();
+}
+showHint()
+//setInterval(showHint,5000)</script>
+
 <style>
 .heart {width: 100px;height: 100px;background: url("https://cssanimation.rocks/images/posts/steps/heart.png") no-repeat;background-position: 0 0;cursor: pointer;transition: background-position 5s steps(28);transition-duration: 0s;}
 .heart.is-active {transition-duration: 1s;background-position: -2800px 0;}

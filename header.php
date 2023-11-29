@@ -5,7 +5,7 @@ $S_password = '';
 $db ='coffee';
 
 
-if ( isset($_SESSION['SecretP']) && isset($_SESSION['SecretE']) && isset($_SESSION['SecretI']) && isset($_SESSION['SecretN']) ){
+if ( isset($_SESSION['SecretP'])){
 	
 	$password = $_SESSION['SecretP'];
 	$email = $_SESSION['SecretE'];
@@ -16,7 +16,7 @@ if ( isset($_SESSION['SecretP']) && isset($_SESSION['SecretE']) && isset($_SESSI
 
 				while ($row = $result -> fetch_row()) {
 					$db_password = $row[3];
-					$verify =password_verify($password, $db_password);
+					$verify = password_verify($password, $db_password);
 					if ($_SESSION['SecretE'] = 'admin@gmail.com'){
 						$admin = true;
 					}

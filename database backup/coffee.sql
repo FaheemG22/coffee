@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 28, 2023 at 09:23 PM
+-- Generation Time: Nov 29, 2023 at 08:51 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -40,7 +40,7 @@ CREATE TABLE `cake_details` (
 --
 
 INSERT INTO `cake_details` (`Cake_ID`, `User_ID`, `Cake_Name`, `Img_Link`, `Date_Time`) VALUES
-(7, 17, 'asda ', '$2y$10$Q6Zr7ixmUlrVVeO5Zfrf2ulNeJR7MSyyOFL2K39ir.sl5H4SnHoG2.jpg', '2023-11-28 14:56:09');
+(0, 18, 'cake ', '$2y$10$09jZhcdb4YBklyMp2d3ptuFPIruHFziz2hKQ0ISw0hFwMvoPT4Joe.jfif', '2023-11-29 07:38:32');
 
 -- --------------------------------------------------------
 
@@ -63,7 +63,7 @@ CREATE TABLE `menu_details` (
 INSERT INTO `menu_details` (`Item_Name`, `Item_Type`, `Item_Cost`, `Item_Availability`, `Img_Link`) VALUES
 ('Blackcurrant Tart', 'Dessert', 3.45, 1, 'Blackcurrant_Tart.jpg'),
 ('Breakfast Burger', 'Main', 6.5, 1, 'Breakfast_Burger.jpg'),
-('Brunch Shake Trio', 'Dessert', 15.75, 1, 'Brunch_Shake_Trio.jpg'),
+('Brunch_Shake_Trio', 'Dessert', 15.75, 1, 'Brunch_Shake_Trio.jpg'),
 ('Burger', 'Main', 6.5, 1, 'Burger.jpg'),
 ('Cheesy Butter Pasta', 'Main', 6, 0, 'Cheesy_Butter_Pasta.jpg'),
 ('Coffee', 'Coffee', 5.5, 1, 'Coffee.jpg'),
@@ -144,8 +144,7 @@ CREATE TABLE `user_details` (
 INSERT INTO `user_details` (`UserID`, `UserEmail`, `UserName`, `UserPassword`) VALUES
 (13, 'Faheem@gmail.com', 'Faheem', '$2y$10$/bpkGaQGRI1gzs3/KimLmu12Bai/EFk8OY38Mb/KJu636Q2mAhlHq'),
 (14, 'fred@gmail.com', 'fred', '$2y$10$LXGfUvcFaU1Zg1jOKSy2yeYJfZuAxvTvkqEcnWGi/ydDU8hz0dCD6'),
-(16, 'admin@admin.com', 'mohammed', '$2y$10$JnE1z3WwCuMlnDC9oXLDl.DNjAjPnB8TDig.xRW357AE1gMUigNdC'),
-(17, 'admin@gmail.com', 'Admin', '$2y$10$ZVYuslHDHboqIiwRAtT10.dIL9pxTMFRFRFrztTgZq3eGLf9wTmLy');
+(18, 'asda@gmail.com', 'asda', '$2y$10$Zji9Oyg2T2AlJpAfFiWrBurMpoLJayqOY1yiZZrKBUe9DI8GHiPcS');
 
 --
 -- Indexes for dumped tables
@@ -155,7 +154,7 @@ INSERT INTO `user_details` (`UserID`, `UserEmail`, `UserName`, `UserPassword`) V
 -- Indexes for table `cake_details`
 --
 ALTER TABLE `cake_details`
-  ADD PRIMARY KEY (`Cake_ID`);
+  ADD UNIQUE KEY `Cake_ID` (`Cake_ID`);
 
 --
 -- Indexes for table `menu_details`
@@ -182,12 +181,6 @@ ALTER TABLE `user_details`
 --
 
 --
--- AUTO_INCREMENT for table `cake_details`
---
-ALTER TABLE `cake_details`
-  MODIFY `Cake_ID` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
---
 -- AUTO_INCREMENT for table `order_details`
 --
 ALTER TABLE `order_details`
@@ -197,7 +190,7 @@ ALTER TABLE `order_details`
 -- AUTO_INCREMENT for table `user_details`
 --
 ALTER TABLE `user_details`
-  MODIFY `UserID` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `UserID` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
