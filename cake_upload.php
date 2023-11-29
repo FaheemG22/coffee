@@ -43,7 +43,6 @@ if ($uploadOk == 0) {
     $newCakeName = str_replace('>',' ',$cake_Name);
     $newCakeName = str_replace('SQL','no',$newCakeName);
     
-    $newFileName = password_hash($newCakeName,PASSWORD_DEFAULT); 
 
   if (file_exists($target_dir . $newFileName . '.' . $temp[1])) {
     echo "Sorry, file already exists.";
@@ -63,7 +62,7 @@ if ($uploadOk == 0) {
     }
 
     else {
-
+    $newFileName = md5(uniqid(mt_rand(), true));
     $newTargetFile = $target_dir . $newFileName . '.' . $temp[1];
     $img_link = $newFileName . '.' . $temp[1];
     

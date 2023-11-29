@@ -5,26 +5,23 @@ $S_password = '';
 $db ='coffee';
 
 
-if ( isset($_SESSION['SecretP']) ){
+if ( isset($_SESSION['SecretP']) && isset($_SESSION['SecretE']) && isset($_SESSION['SecretI']) && isset($_SESSION['SecretN']) ){
 	
 	$password = $_SESSION['SecretP'];
 	$email = $_SESSION['SecretE'];
 	$user_ID = $_SESSION["SecretI"];
-	echo $email;
-	if ($conn  = mysqli_connect($host, $S_user, $S_password, $db)){
-	$sql = "SELECT * FROM `user_details` WHERE `UserEmail`= '$email'";
+	$conn  = mysqli_connect($host, $S_user, $S_password, $db);
+	$sql = "SELECT * FROM user_details Where UserEmail= '$email'";
 	$result = mysqli_query($conn, $sql);
-		while($row = $result->fetch_assoc()) 
-		{
-			echo $db_password;
-			$db_password = $row[3];
-			$verify = password_verify($password, $db_password);
-			if ($_SESSION['SecretE'] = 'admin@gmail.com'){
-				$admin = true;
+
+				while ($row = $result -> fetch_row()) {
+					$db_password = $row[3];
+					$verify =password_verify($password, $db_password);
+					if ($_SESSION['SecretE'] = 'admin@gmail.com'){
+						$admin = true;
+					}
 			}
-		}
 		
-}
 }
 
 

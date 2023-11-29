@@ -31,10 +31,10 @@
   echo'
     <section class="ftco-section" style="background-color:#ffd299;">
     <div class="container">
-    <div name="form1"  class="modal" style="display:block;position:static;background-color: rgba(0, 0, 0, 0.00);">
+    <div name="form1"  class="modal ftco-animate" style="display:block;position:static;background-color: rgba(0, 0, 0, 0.00);">
     <form autocomplete="on"  class="modal-content" method="post" action="upload.php" enctype="multipart/form-data" style="width:100%;min-width:250px;min-height:500px;">
             <div class="container">
-            <div class="heading-section ftco-animate ">
+            <div class="heading-section ">
             <span class="subheading">Upload</span>
             <br>
               <span class="subheading">Your Own Cake</span>
@@ -76,13 +76,13 @@ else {
   echo'
   <section class="ftco-section" style="background-color:#ffd299;">
     <div class="container">
-    <div name="form1"  class="modal" style="display:block;position:static;background-color: rgba(0, 0, 0, 0.00);">
+    <div name="form1"  class="modal ftco-animate" style="display:block;position:static;background-color: rgba(0, 0, 0, 0.00);">
     <form autocomplete="on"  class="modal-content" enctype="multipart/form-data" style="width:100%;min-width:250px;min-height:500px;">
             <div class="container">
-            <div class="heading-section ftco-animate ">
+            <div class="heading-section">
             <span class="subheading">Please Login</span>
             <br>
-              <span class="subheading">To Use</span>
+            <span class="subheading">To Use</span>
             </div>
             <br>
             <hr>
@@ -95,7 +95,33 @@ else {
 }
       ?>
 
+<section class="ftco-section ftco-animate" style="background-image:url(images/bg_6.jpg);">
+<!--
+  filter: blur(8px);-webkit-filter: blur(8px);
+-->
+  <div id="refresh">
 
+  </div>
+      </section>
+<!--heart styling and js-->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>function showHint() {const xmlhttp = new XMLHttpRequest();xmlhttp.onload = function() {document.getElementById("refresh").innerHTML = this.responseText;}
+xmlhttp.open("GET", "cake_update.php?q=");
+xmlhttp.send();
+}
+showHint()
+//setInterval(showHint,5000)</script>
+
+<style>
+.heart {width: 100px;height: 100px;background: url("https://cssanimation.rocks/images/posts/steps/heart.png") no-repeat;background-position: 0 0;cursor: pointer;transition: background-position 5s steps(28);transition-duration: 0s;}
+.heart.is-active {transition-duration: 1s;background-position: -2800px 0;}
+</style>
+
+<script>
+$(function () {$(".heart").on("click", function () {$(this).toggleClass("is-active");});});
+</script>
 
 
 

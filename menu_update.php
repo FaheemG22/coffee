@@ -22,8 +22,8 @@ $a = "<br><br>asda";
     ';
   //style="z-index:1000000;"
     echo'
-    <div class="col-md-6 mb-5 pb-3">
-    <h3 class="mb-5 heading-pricing ">Drinks</h3>';
+    <div class="col-md-6 mb-5 pb-3 heading-section">
+    <h3 class="subheading" style="margin-bottom:50px;">Drinks</h3>';
     
         $sql = "SELECT * FROM `menu_details` WHERE Item_Type = 'Drink' AND Item_Availability = 1"; 
         $result = mysqli_query($conn, $sql);
@@ -43,8 +43,8 @@ $a = "<br><br>asda";
         echo'</div>';
 
     echo'
-    <div class="col-md-6 mb-5 pb-3">
-    <h3 class="mb-5 heading-pricing ">Mains</h3>';
+    <div class="col-md-6 mb-5 pb-3 heading-section">
+    <h3 class="subheading" style="margin-bottom:50px;">Mains</h3>';
     
         $sql = "SELECT * FROM `menu_details` WHERE Item_Type = 'Main' AND Item_Availability = 1"; 
         $result = mysqli_query($conn, $sql);
@@ -64,8 +64,8 @@ $a = "<br><br>asda";
         echo'</div>';
 
     echo'
-    <div class="col-md-6 mb-5 pb-3">
-    <h3 class="mb-5 heading-pricing ">Desserts</h3>';
+    <div class="col-md-6 mb-5 pb-3 heading-section">
+    <h3 class="subheading" style="margin-bottom:50px;">Desserts</h3>';
     
         $sql = "SELECT * FROM `menu_details` WHERE Item_Type = 'Dessert' AND Item_Availability = 1"; 
         $result = mysqli_query($conn, $sql);
@@ -85,8 +85,8 @@ $a = "<br><br>asda";
         echo'</div>';
 
     echo'
-    <div class="col-md-6 mb-5 pb-3">
-    <h3 class="mb-5 heading-pricing ">Appetisers</h3>';
+    <div class="col-md-6 mb-5 pb-3 heading-section">
+    <h3 class="subheading" style="margin-bottom:50px;">Appetisers</h3>';
     
         $sql = "SELECT * FROM `menu_details` WHERE Item_Type = 'Appetiser' AND Item_Availability = 1"; 
         $result = mysqli_query($conn, $sql);
@@ -106,8 +106,8 @@ $a = "<br><br>asda";
         echo'</div>';
 
             echo'
-            <div class="col-md-6 mb-5 pb-3">
-            <h3 class="mb-5 heading-pricing ">Coffee</h3>';
+            <div class="col-md-6 mb-5 pb-3 heading-section">
+            <h3 class="subheading" style="margin-bottom:50px;">Coffee</h3>';
             
                 $sql = "SELECT * FROM `menu_details` WHERE Item_Type = 'Coffee' AND Item_Availability = 1"; 
                 $result = mysqli_query($conn, $sql);

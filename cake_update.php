@@ -23,17 +23,17 @@ while($row = $result->fetch_assoc()) {
             <div class="heading-section  ">
             
               <div>
-              <span class="subheading text-center">'. $row['Date_Time'] .'</span>
+              <span class="subheading text-center">'. $row['Cake_Name'] .'</span>
               </div>
               
               <div>
-              <span class="subheading text-center" style="font-size:35px;margin-top:20px;">2023-11-28 14:56:09</span>
+              <span class="subheading text-center" style="font-size:35px;margin-top:20px;">' . $row['Date_Time'].'</span>
               </div>
             </div>
         
             <hr>
 
-            <img src="images/cakerate/'.$row['Img_Link'] . '" class="img-thumbnail rounded mx-auto d-block" style="height:min-content;">
+            <img src="images/cakerate/'.$row['Img_Link'] . '" class="img-thumbnail rounded mx-auto d-block" style="max-height:1500px;max-width:90%;">
           
             <hr>
             <div class="d-flex justify-content-center" style="margin-top:-40px;">
