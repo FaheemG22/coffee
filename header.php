@@ -17,13 +17,13 @@ if ( isset($_SESSION['SecretP']) && isset($_SESSION['SecretE']) && isset($_SESSI
 				while ($row = $result -> fetch_row()) {
 					$db_password = $row[3];
 					$verify =password_verify($password, $db_password);
-					if ($_SESSION['SecretE'] = 'admin@gmail.com'){
-						$admin = true;
-					}
-			}
-		
+					if ($verify) {
+						if (($_SESSION['SecretE'] = 'admin@gmail.com')){
+							$admin = true;
+						}
+					}	
+				}
 }
-
 
 
 
