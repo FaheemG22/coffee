@@ -84,12 +84,12 @@ if ( isset($_SESSION['SecretP']) && isset($_SESSION['SecretE']) && isset($_SESSI
 				
 					<div style="flex-grow: 1;text-align: center;">
 					<li class="nav-item">
-					<button style="margin-right:5px;width:100%;height:100%;size:100%;margin-top:10px;" class="btn btn-success" onclick="document.getElementById('login_form').style.display='block';invis()"> Login </button></li>
+					<button style="margin-right:5px;width:100%;height:100%;size:100%;margin-top:10px;" class="btn btn-success" onclick="document.getElementById('login_form').style.display='block';"> Login </button></li>
 					</div>
 
 					<div style="flex-grow: 1;text-align: center;">
 					<li class="nav-item">
-					<button style="margin-left:5px;width:100%;height:100%;size:100%;margin-top:10px;" class="btn btn-danger" onclick="document.getElementById('sign_up_form').style.display='block';invis()"> Register </button></li>
+					<button style="margin-left:5px;width:100%;height:100%;size:100%;margin-top:10px;" class="btn btn-danger" onclick="document.getElementById('sign_up_form').style.display='block';"> Register </button></li>
 					</div>
 					
 				</div>
@@ -101,7 +101,7 @@ if ( isset($_SESSION['SecretP']) && isset($_SESSION['SecretE']) && isset($_SESSI
 	  	</div>
 	</nav>
 </section>
-	<div name='form1' id="sign_up_form" class="modal">
+	<div name='form1' id="sign_up_form" class="modal" style="z-index:10000000;">
 	<span onclick="document.getElementById('sign_up_form').style.display='none';vis();" class="close" title="Close Modal">&times;</span>
 	<form autocomplete="on"  class="modal-content" method="post">
 		<div class="container">
@@ -120,7 +120,7 @@ if ( isset($_SESSION['SecretP']) && isset($_SESSION['SecretE']) && isset($_SESSI
 	</form>
 	</div>
 
-	<div name='form2' id="login_form" class="modal">
+	<div name='form2' id="login_form" class="modal" style="z-index:10000000;">
 	<span onclick="document.getElementById('login_form').style.display='none';vis();" class="close" title="Close Modal">&times;</span>
 	<form autocomplete="on"  class="modal-content" method="post">
 		<div class="container">
@@ -139,20 +139,17 @@ if ( isset($_SESSION['SecretP']) && isset($_SESSION['SecretE']) && isset($_SESSI
 	</div>
 
 <script>
-window.onclick = function(event) {
-	if (event.target == document.getElementById('sign_up_form') || event.target == document.getElementById('login_form') || event.target == document.getElementById('new_item_form'))
-	{
-		document.getElementById('sign_up_form').style.display = "none";
-		document.getElementById('login_form').style.display = "none";
-		try{
+window.onclick = function(event) {if (event.target == document.getElementById('sign_up_form') || event.target == document.getElementById('login_form') || event.target == document.getElementById('new_item_form')){
+	vis()
+}
+};
+function vis(){
+	document.getElementById('sign_up_form').style.display = "none";
+	document.getElementById('login_form').style.display = "none";
+	try{
 		document.getElementById('new_item_form').style.display='none';
-		}
-		catch(err) {
-		}
-		vis()
-	}};
-
-function vis(){document.getElementById('book').style.display = 'block'; document.getElementById('hide').removeAttribute("hidden")}
-function invis(){document.getElementById('book').style.display = 'none'; document.getElementById('hide').setAttribute("hidden", 'hidden')}
+	}
+	catch(err) {}
+}
 </script>
 	
