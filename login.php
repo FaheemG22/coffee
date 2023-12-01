@@ -26,8 +26,11 @@ echo "db connection error because of".mysqli_connect_error();
 try{
 	$sql = "SELECT * FROM user_details Where UserEmail= '$email'";
 	$result = mysqli_query($conn, $sql);
-			
+
+
+
 	while ($row = $result -> fetch_row()) {
+		echo'asda';
 		$db_password = $row[3];
 		$verify = password_verify($password, $db_password); 
 		
@@ -46,6 +49,7 @@ try{
 			echo 'Incorrect Password!'; 
 		}
 	}
+	echo'Account does not exist';
 }
 catch(Exception $e) {
 echo 'Incorrect Email or password';

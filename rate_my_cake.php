@@ -108,55 +108,69 @@ else {
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
-let old_len = 0;
+let old_len = 1;
 let new_len = 0;
+
 function showHint() {
   const xmlhttp = new XMLHttpRequest();
   xmlhttp.onload = function() {
     var myObj = JSON.parse(this.responseText);
-    var new_refresh = 
-    `<div class="container">
-    <div class="modal" style="display:block;position:static;background-color: rgba(0, 0, 0, 0.00);">
-      <div class="modal-content border rounded-3" style="width:100%;min-width:250px;min-height:500px;">
-        <div class="container">
-            <div class="heading-section  ">
-            
-              <div>
-              <span class="subheading text-center">` + myObj[0].Cake_Name  + `</span>
+    block = [];
+    data = [];
+    new_len = myObj.length;
+    if (new_len != old_len){
+    
+      for (var i = 0; i < myObj.length; i++)
+      {
+      var obj = myObj[i];
+    
+      for (var key in obj)
+      {
+          var value = obj[key];
+          data[key] = value;
+          if (key == 'Date_Time')
+          {
+            block.push(`<div class="container">
+            <div class="modal" style="display:block;position:static;background-color: rgba(0, 0, 0, 0.00);">
+              <div class="modal-content border rounded-3" style="width:100%;min-width:250px;min-height:500px;">
+                <div class="container">
+                    <div class="heading-section  ">
+                      <div>
+                      <span class="subheading text-center">` + data['Cake_Name'] + `</span>
+                      </div>
+                      <div>
+                      <span class="subheading text-center" style="font-size:35px;margin-top:20px;">` + data['Date_Time'] + `</span>
+                      </div>
+                    </div>
+                    <hr>
+                    <img src="images/cakerate/` + data['Img_Link'] + `" class="img-thumbnail rounded mx-auto d-block" style="max-height:1500px;max-width:90%;">
+                    <hr>
+                    <div class="d-flex justify-content-center" style="margin-top:-40px;">
+                      <div class="heart"></div>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                      <p class="text-center" style="border: 2px solid white;border-radius: 15px;margin-top:-25px;height:50px;width:150px;font-size:x-large;"> 100 Likes</p>
+                    </div>
+                  </div>            
+                </div>
               </div>
-              
-              <div>
-              <span class="subheading text-center" style="font-size:35px;margin-top:20px;">` + myObj[0].Date_Time + `</span>
-              </div>
             </div>
-        
-            <hr>
+            <br>`);
+          }
+        }
+    
 
-            <img src="images/cakerate/` + myObj[0].Img_Link + `" class="img-thumbnail rounded mx-auto d-block" style="max-height:1500px;max-width:90%;">
-          
-            <hr>
-            <div class="d-flex justify-content-center" style="margin-top:-40px;">
-              <div class="heart"></div>
-            </div>
+}
+    old_len =myObj.length;
 
-            <div class="d-flex justify-content-center">
-              <p class="text-center" style="border: 2px solid white;border-radius: 15px;margin-top:-25px;height:50px;width:150px;font-size:x-large;"> 100 Likes</p>
-            </div>
-
-          </div>            
-        </div>
-      </div>
-    </div>
-    <br>`
-
-
-    document.getElementById("refresh").innerHTML = new_refresh;
+    document.getElementById("refresh").innerHTML = block;
   }
+}
 xmlhttp.open("GET", "cake_update.php?q=");
 xmlhttp.send();
 }
 showHint()
-//setInterval(showHint,5000)</script>
+setInterval(showHint,5000)</script>
 
 <style>
 .heart {width: 100px;height: 100px;background: url("https://cssanimation.rocks/images/posts/steps/heart.png") no-repeat;background-position: 0 0;cursor: pointer;transition: background-position 5s steps(28);transition-duration: 0s;}
