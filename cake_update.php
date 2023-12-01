@@ -1,5 +1,6 @@
 <?php
 // Array with names
+session_start();
 $host = 'localhost';
 $S_user = 'root';
 $S_password = '';
@@ -8,14 +9,20 @@ $db ='Coffee';
 $conn = mysqli_connect($host,$S_user,$S_password,$db);
 
 if($conn){}
+/*
 $a = "<br><br>asda";
 echo'<style>
 .heart {width: 100px;height: 100px;background: url("https://cssanimation.rocks/images/posts/steps/heart.png") no-repeat;background-position: 0 0;cursor: pointer;transition: background-position 5s steps(28);transition-duration: 0s;}
 .heart.is-active {transition-duration: 1s;background-position: -2800px 0;}
 </style>';
+*/
+
 $sql = "SELECT * FROM `cake_details` ORDER BY `Cake_ID` DESC"; 
 $result = mysqli_query($conn, $sql);
+$array = array();
 while($row = $result->fetch_assoc()) {
+  $array[] = array('Cake_ID' => $row['Cake_ID'],'User_ID' => $row['User_ID'],'Cake_Name' => $row['Cake_Name'],'Img_Link' => $row['Img_Link'],'Date_Time' => $row['Date_Time']);
+  /*
     echo'<div class="container">
     <div class="modal" style="display:block;position:static;background-color: rgba(0, 0, 0, 0.00);">
       <div class="modal-content border rounded-3" style="width:100%;min-width:250px;min-height:500px;">
@@ -50,6 +57,7 @@ while($row = $result->fetch_assoc()) {
     </div>
     <br>'
     ;
-
+*/
 }
+echo json_encode($array, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 ?>
