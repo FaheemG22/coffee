@@ -95,7 +95,7 @@ else {
 }
       ?>
 
-<section class="ftco-section ftco-animate" style="background-image:url(images/bg_6.jpg);">
+<section class="ftco-section ftco-animate" style="background-color:#120F0F;">
 <!--
   filter: blur(8px);-webkit-filter: blur(8px);
 -->
