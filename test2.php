@@ -94,10 +94,15 @@ else {
       ';
 }
       ?>
-<section class="ftco-section ftco-animate" style="background-color:#0f1112;">
-  <div id="refresh"></div>
-</section>
 
+<section class="ftco-section ftco-animate" style="background-color:#0f1112;">
+<!--
+  filter: blur(8px);-webkit-filter: blur(8px);
+-->
+  <div id="refresh">
+
+  </div>
+      </section>
 <!--heart styling and js-->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -157,20 +162,16 @@ else {
         <div class="modal-content border rounded-3 modalcontents">
           <div class="container">
               <div class="heading-section">
-                <div class="flex">
-                <span class="subheading text-center"><p style="font-size:128px">` + data['Cake_Name'] + `</p></span>
+                <div>
+                <span class="subheading text-center">` + data['Cake_Name'] + `</span>
                 </div>
                 <div>
-                <span class="subheading text-center time" style="font-size:30px;">` + data['Date_Time'] + `</span>
+                <span class="subheading text-center time">` + data['Date_Time'] + `</span>
                 </div>
               </div>
               <hr>
               <img src="images/cakerate/` + data['Img_Link'] + `" class="img-thumbnail rounded mx-auto d-block usercontent">
               <hr>
-              <br>
-              <div class="d-flex justify-content-center" style="margin-top:-40px;">
-              <span class="subheading text-center"><p style="font-size:32px"> Posted by: ` + data['User_ID'] + `</p></span>
-              </div>
               <div class="d-flex justify-content-center" style="margin-top:-40px;">
                 <div class="heart"></div>
               </div>
@@ -186,7 +187,7 @@ else {
 
 </script>
 
-<style>.heart {width: 100px;height: 100px;background: url("https://cssanimation.rocks/images/posts/steps/heart.png") no-repeat;background-position: 0 0;cursor: pointer;transition: background-position 5s steps(28);transition-duration: 0s;}.heart.is-active {transition-duration: 1s;background-position: -2800px 0;}.likes {border: 2px solid white;border-radius: 15px;margin-top:-25px;height:50px;width:150px;font-size:x-large;}.usercontent {max-height:1500px;max-width:90%;}.time {font-size:10px;margin-top:20px;}.modals {display:block;position:static;background-color: rgba(0, 0, 0, 0.00);}.modalcontents{width:100%;min-width:250px;min-height:500px;}</style>
+<style>.heart {width: 100px;height: 100px;background: url("https://cssanimation.rocks/images/posts/steps/heart.png") no-repeat;background-position: 0 0;cursor: pointer;transition: background-position 5s steps(28);transition-duration: 0s;}.heart.is-active {transition-duration: 1s;background-position: -2800px 0;}.likes {border: 2px solid white;border-radius: 15px;margin-top:-25px;height:50px;width:150px;font-size:x-large;}.usercontent {max-height:1500px;max-width:90%;}.time {font-size:35px;margin-top:20px;}.modals {display:block;position:static;background-color: rgba(0, 0, 0, 0.00);}.modalcontents{width:100%;min-width:250px;min-height:500px;}</style>
 
 <?php include "./footer.php"?>
   
