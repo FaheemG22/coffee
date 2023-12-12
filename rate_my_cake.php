@@ -54,7 +54,7 @@
 
             <p>By Uploading An Image You Agree To Our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
             <div class="clearfix">
-              <button type="submit" class="signupbtn" formaction="cake_upload.php" style="width:100%;">Submit</button>
+              <button type="submit" class="signupbtn" formaction="api/cake/cake_upload.php" style="width:100%;">Submit</button>
             </div>
             </div>
           </form>

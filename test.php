@@ -1,55 +1,28 @@
 <?php
-header("Content-Type: application/json");
+session_start();
+$host = 'localhost';
+$S_user = 'root';
+$S_password = '';
+$db ='Coffee';
 
-
-// Simulate a database or data storage
-$data = [
-    1 => ['id' => 1, 'name' => 'Item 1'],
-    2 => ['id' => 2, 'name' => 'Item 2'],
-    3 => ['id' => 3, 'name' => 'Item 3'],
-];
-
-
-// Handle GET request
-if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-    if (isset($_GET['id'])) {
-        $id = $_GET['id'];
-        if (isset($data[$id])) {
-            echo json_encode($data[$id]);
-        } else {
-            echo json_encode(['error' => 'Item not found']);
-        }
-    } else {
-        echo json_encode($data);
-    }
+$conn = mysqli_connect($host,$S_user,$S_password,$db);
+if($conn){}
+if (isset($_GET['Last'])){
+  $last = $_GET['Last'];
+  $sql = "SELECT * from cake_details WHERE Cake_ID < $last AND Cake_ID ORDER BY Cake_ID DESC LIMIT 3 ";
 }
+else {$sql = "SELECT * from cake_details WHERE Cake_ID AND Cake_ID ORDER BY Cake_ID DESC LIMIT 3 ";}
+  $result = mysqli_query($conn, $sql);
+  $array = array();
 
+  while($row = $result->fetch_assoc()) {
+    $array[] = array(
+    'Cake_ID' => $row['Cake_ID'],
+    'User_ID' => $row['User_ID'],
+    'Cake_Name' => $row['Cake_Name'],
+    'Img_Link' => $row['Img_Link'],
+    'Date_Time' => $row['Date_Time']);
+  }
 
-// Handle POST request
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $input = json_decode(file_get_contents('php://input'), true);
-    
-    // Validate input
-    if (isset($input['name'])) {
-        $newId = max(array_keys($data)) + 1;
-        $data[$newId] = ['id' => $newId, 'name' => $input['name']];
-        echo json_encode(['message' => 'Item added successfully', 'id' => $newId]);
-    } else {
-        echo json_encode(['error' => 'Invalid input']);
-    }
-}
-
-
-// Handle DELETE request
-if ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
-    parse_str(file_get_contents('php://input'), $deleteParams);
-    $id = $deleteParams['id'] ?? null;
-    
-    if ($id && isset($data[$id])) {
-        unset($data[$id]);
-        echo json_encode(['message' => 'Item deleted successfully']);
-    } else {
-        echo json_encode(['error' => 'Item not found']);
-    }
-}
+  echo json_encode($array, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 ?>

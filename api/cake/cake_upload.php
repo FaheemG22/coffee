@@ -1,6 +1,6 @@
 <?php
 session_start();
-$target_dir = "images/cakerate/";
+$target_dir = "../../images/cakerate/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
@@ -25,7 +25,7 @@ if ($_FILES["fileToUpload"]["size"] > 500000) {
 
 // Allow certain file formats
 if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-&& $imageFileType != "gif" && $imageFileType != "jfif" && $imageFileType != "webp" ) {
+&& $imageFileType != "gif" && $imageFileType != "webp" ) {
   echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
   $uploadOk = 0;
 }
@@ -44,13 +44,9 @@ if ($uploadOk == 0) {
     $newCakeName = str_replace('SQL','no',$newCakeName);
     
 
-  if (file_exists($target_dir . $newFileName . '.' . $temp[1])) {
-    echo "Sorry, file already exists.";
-    $uploadOk = 0;
-    
-  }
 
-  elseif (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+
+  if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
     
     $host = 'localhost';
     $S_user = 'root';

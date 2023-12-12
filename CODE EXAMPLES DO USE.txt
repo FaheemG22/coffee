@@ -1,7 +1,7 @@
 ﻿SQL between
 
 
-SELECT * from cake_details WHERE Cake_ID > 3 LIMIT 1
+SELECT * from cake_details WHERE Cake_ID < 3 LIMIT 1
 
 
 
