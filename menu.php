@@ -187,7 +187,7 @@ function showHint() {
     xmlhttp.onload = function() {
       document.getElementById("refresh").innerHTML = this.responseText;
     }
-  xmlhttp.open("GET", "menu_update.php?q=");
+  xmlhttp.open("GET", "api/menu/menu_update.php?q=");
   xmlhttp.send();
   }
 showHint()

@@ -1,5 +1,4 @@
 <?php
-// Array with names
 session_start();
 $host = 'localhost';
 $S_user = 'root';
@@ -9,8 +8,15 @@ $db ='Coffee';
 $conn = mysqli_connect($host,$S_user,$S_password,$db);
 
 if($conn){}
+try{
+  if (isset($_GET['q'])){
+  $json = $_GET['q'];
+  }
+}
+catch(Exception $e){
+  $json = '';
+}
 
-$json = $_GET['q'];
 $sql = "SELECT * FROM `cake_details` ORDER BY `Cake_ID` DESC"; 
 $result = mysqli_query($conn, $sql);
 $array = array();

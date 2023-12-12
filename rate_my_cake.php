@@ -32,7 +32,7 @@
     <section class="ftco rubberBand" style="background-color:#ffd299;">
     <div class="container">
     <div name="form1"  class="modal ftco-animate" style="display:block;position:static;background-color: rgba(0, 0, 0, 0.00);">
-    <form autocomplete="on"  class="modal-content" method="post" action="upload.php" enctype="multipart/form-data" style="width:100%;min-width:250px;min-height:500px;">
+    <form autocomplete="on"  class="modal-content" method="post" action="api/cake/upload.php" enctype="multipart/form-data" style="width:100%;min-width:250px;min-height:500px;">
             <div class="container">
             <div class="heading-section ">
             <span class="subheading">Upload</span>
@@ -116,7 +116,7 @@ else {
     xmlhttp.onload = function() {
       dataHandler(this.responseText)
     }
-    xmlhttp.open("GET", "cake_update.php?q=" + lastPost);
+    xmlhttp.open("GET", "api/cake/cake_update.php?q=" + lastPost);
     xmlhttp.send();
   }
 

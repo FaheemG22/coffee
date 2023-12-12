@@ -114,7 +114,7 @@ if ( isset($_SESSION['SecretP']) && isset($_SESSION['SecretE']) && isset($_SESSI
 		<p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 		<div class="clearfix">
 			<button type="button" onclick="document.getElementById('sign_up_form').style.display='none'" class="cancelbtn">Cancel</button>
-			<button type="submit" class="signupbtn" formaction="submit.php">Sign Up</button>
+			<button type="submit" class="signupbtn" formaction="api/accounts/submit.php">Sign Up</button>
 		</div>
 		</div>
 	</form>
@@ -132,7 +132,7 @@ if ( isset($_SESSION['SecretP']) && isset($_SESSION['SecretE']) && isset($_SESSI
 		<p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 		<div class="clearfix">
 			<button type="button" onclick="document.getElementById('login_form').style.display='none'" class="cancelbtn">Cancel</button>
-			<button type="submit" class="signupbtn" formaction="login.php">Login</button>
+			<button type="submit" class="signupbtn" formaction="api/accounts/login.php">Login</button>
 		</div>
 		</div>
 	</form>
