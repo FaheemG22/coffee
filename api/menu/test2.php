@@ -13,24 +13,26 @@
     
   
 
-<script>
-function showHint() {
+<script>    
+let text = []
+function text_save(inp) {
+    text.push(inp)
+}
+function refresh() {
     const types = ['Drink','Main','Dessert','Appetiser','Coffee'];
     const xmlhttp = new XMLHttpRequest();
     xmlhttp.onload = function() {
-
-      details.push(this.responseText);
+        document.getElementById("refresh").innerHTML = this.responseText;
 
     }
-    let details = [];
     for (let i = 0, len = types.length, text = ""; i < len; i++){
         xmlhttp.open("GET", "test.php?type="+types[i]);
         xmlhttp.send();
     }
-    document.getElementById("refresh").innerHTML = details;
+
   }
-showHint()
-setInterval(showHint,5000)
+refresh()
+setInterval(refresh,5000)
 </script>
     
   </body>
