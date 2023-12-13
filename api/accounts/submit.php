@@ -37,7 +37,7 @@
 		
 	?>
 
-	<form name='form1' id='form1' action="index.php" method="get">
+	<form name='form1' id='form1' action="../../index.php" method="get">
 		<input type="submit"  value="Home">
 	</form>
 

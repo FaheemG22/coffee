@@ -47,7 +47,7 @@ if($conn){}
         echo'
         <div name="form3" id="new_item_form" class="modal">
         <span onclick="document.getElementById("new_item_form").style.display="none";" class="close" title="Close Modal">&times;</span>
-        <form autocomplete="on"  class="modal-content" method="post" action="upload.php" enctype="multipart/form-data" style="width:40%;min-width:250px;min-height:500px;">
+        <form autocomplete="on"  class="modal-content" method="post" action="api/menu/upload.php" enctype="multipart/form-data" style="width:40%;min-width:250px;min-height:500px;">
           <div class="container">
           <h1>New Item</h1>
           <p>Please fill in this form to create a new menu item</p>
@@ -73,7 +73,7 @@ if($conn){}
           <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
           <div class="clearfix">
             <button type="button" onclick="document.getElementById("new_item_form").style.display="none"" class="cancelbtn">Cancel</button>
-            <button type="submit" class="signupbtn" formaction="menu_upload.php">Submit</button>
+            <button type="submit" class="signupbtn" formaction="api/menu/menu_upload.php">Submit</button>
           </div>
           </div>
         </form>

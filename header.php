@@ -75,7 +75,7 @@ if ( isset($_SESSION['SecretP']) && isset($_SESSION['SecretE']) && isset($_SESSI
 					<div style="flex-grow: 1;text-align: center;">
 					<li class="nav-item">
 					<form name='form3' id='form1' method="post">
-					<input style="margin-left:5px;width:100%;height:100%;size:100%;margin-top:10px;" class="btn btn-danger custom" type="submit" value="Logout" formaction="logout.php"></li>
+					<input style="margin-left:5px;width:100%;height:100%;size:100%;margin-top:10px;" class="btn btn-danger custom" type="submit" value="Logout" formaction="api/accounts/logout.php"></li>
 					</form>
 					</div>
 			  

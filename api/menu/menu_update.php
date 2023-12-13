@@ -23,11 +23,12 @@ function menu_output($inp, $name){
                 <div class="img" style="background-image: url(images/menu/'. $row['Img_Link'] .');"></div>
                 <div class="desc pl-3">
                 <div class="d-flex text align-items-center">
-                    <h3><span>'. htmlspecialchars($row['Item_Name']) .'</span></h3>
+                    <h3><span style="ftco-heading-2">'. htmlspecialchars($row['Item_Name']) .'</span></h3>
                     <span class="price">£' . htmlspecialchars($row['Item_Cost']) . '</span>
                 </div>
                 </div>
                 </div>';                
     }
     echo'</div>';}
+    
 ?>
