@@ -181,17 +181,82 @@ if($conn){}
 
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-<script>
-function showHint() {
-    const xmlhttp = new XMLHttpRequest();
-    xmlhttp.onload = function() {
-      document.getElementById("refresh").innerHTML = this.responseText;
-    }
-  xmlhttp.open("GET", "api/menu/menu_update.php?q=");
-  xmlhttp.send();
+  <script>
+  data = [];
+  block = [];
+  oldJsonLength = []
+
+  function request_menu(inp) {
+    return new Promise((resolve, reject) => {
+      const xmlhttp = new XMLHttpRequest();
+      xmlhttp.open("GET", "api/menu/menu_update.php?type=" + inp);
+      xmlhttp.send();
+      xmlhttp.onload = function () {resolve(this.responseText);};
+      xmlhttp.onerror = function () {reject(new Error("Request failed"));};
+    });
   }
-showHint()
-setInterval(showHint,5000)
+
+  function jsonProccess(jsonData,type){
+    block = block +(`<div class="col-md-6 mb-5 pb-3 heading-section"> 
+    <h3 class="subheading" style="margin-bottom:50px;">` + type + `'s</h3>`);
+
+    for (var row = 0; row < jsonData.length; row++){
+      var row_data = jsonData[row];
+
+      for (var key in row_data){
+          var value = row_data[key];
+          data[key] = value;
+
+          if (key == 'Img_Link'){displayItem(data);}
+      }
+    }
+    block = block + ('</div>')
+  }
+
+  function displayItem(data){
+    block= block +(`
+    <div class="pricing-entry d-flex ">
+                <div class="img" style="background-image: url(images/menu/`+ data['Img_Link'] +`);"></div>
+                <div class="desc pl-3">
+                <div class="d-flex text align-items-center">
+                    <h3><span style="ftco-heading-2">`+ data['Item_Name'] +`</span></h3>
+                    <h3 class="price">£` + data['Item_Cost'] + `</h3>
+                </div>
+                </div>
+                </div>
+    `)
+  }    
+
+  async function responseHandler(type){
+    try {
+        const response = await request_menu(type);
+        var jsonData = JSON.parse(response);
+        
+        if (oldJsonLength[type] != jsonData.length){
+        jsonProccess(jsonData,type);
+        document.getElementById("refresh").innerHTML = block;
+        oldJsonLength[type] =jsonData.length;
+        }
+        else {}
+
+      } 
+      catch (error) {console.error("Error:", error.message);}
+  }
+
+  async function refresh() {
+    const types = ['Drink', 'Main', 'Dessert', 'Appetiser', 'Coffee'];
+    block = '';
+    
+    block = block + (`<section class="ftco-section"><div class="container"><div class="row">`)
+    
+    for (let i = 0; i < types.length; i++) {
+      await responseHandler(types[i])
+      
+    }
+  }
+
+  refresh();
+  setInterval(refresh, 5000);
 </script>
 <script>function items(){document.getElementById('new_item_form').style.display='block';invis()}</script><script src="js/jquery.min.js"></script><script src="js/jquery-migrate-3.0.1.min.js"></script><script src="js/popper.min.js"></script><script src="js/bootstrap.min.js"></script><script src="js/jquery.easing.1.3.js"></script><script src="js/jquery.waypoints.min.js"></script><script src="js/jquery.stellar.min.js"></script><script src="js/owl.carousel.min.js"></script><script src="js/jquery.magnific-popup.min.js"></script><script src="js/aos.js"></script><script src="js/jquery.animateNumber.min.js"></script><script src="js/bootstrap-datepicker.js"></script><script src="js/jquery.timepicker.min.js"></script><script src="js/scrollax.min.js"></script><script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&v=weekly"></script><script src="js/google-map.js"></script><script src="js/main.js"></script>
     
