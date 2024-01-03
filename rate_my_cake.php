@@ -12,7 +12,7 @@
 
     <section class="home-slider owl-carousel">
 
-      <div class="slider-item" style="background-image: url(images/bg_3.jpg);" data-stellar-background-ratio="0.5">
+      <div class="slider-item" style="background-image: url(assets/images/bg_3.jpg);" data-stellar-background-ratio="0.5">
       	<div class="overlay"></div>
         <div class="container">
           <div class="row slider-text justify-content-center align-items-center">
@@ -38,7 +38,7 @@
 
 
 
-<style>.heart {width: 100px;height: 100px;background: url("https://cssanimation.rocks/images/posts/steps/heart.png") no-repeat;background-position: 0 0;cursor: pointer;transition: background-position 5s steps(28);transition-duration: 0s;}.heart.is-active {transition-duration: 1s;background-position: -2800px 0;}.likes {border: 2px solid white;border-radius: 15px;margin-top:-25px;height:50px;width:150px;font-size:x-large;}.usercontent {max-height:1500px;max-width:90%;}.time {font-size:10px;margin-top:20px;}.modals {display:block;position:static;background-color: rgba(0, 0, 0, 0.00);}.modalcontents{width:100%;min-width:250px;min-height:500px;}</style>
+<style>.heart {width: 100px;height: 100px;background: url("https://cssanimation.rocks/assets/images/posts/steps/heart.png") no-repeat;background-position: 0 0;cursor: pointer;transition: background-position 5s steps(28);transition-duration: 0s;}.heart.is-active {transition-duration: 1s;background-position: -2800px 0;}.likes {border: 2px solid white;border-radius: 15px;margin-top:-25px;height:50px;width:150px;font-size:x-large;}.usercontent {max-height:1500px;max-width:90%;}.time {font-size:10px;margin-top:20px;}.modals {display:block;position:static;background-color: rgba(0, 0, 0, 0.00);}.modalcontents{width:100%;min-width:250px;min-height:500px;}</style>
 
 <?php include "assets/php-modules/footer.php"?>
   

@@ -32,7 +32,7 @@ function jsonProccess(jsonData,type){
 function displayItem(data){
   block= block +(`
   <div class="pricing-entry d-flex ">
-              <div class="img" style="background-image: url(images/menu/`+ data['Img_Link'] +`);"></div>
+              <div class="img" style="background-image: url(assets/images/menu/`+ data['Img_Link'] +`);"></div>
               <div class="desc pl-3">
               <div class="d-flex text align-items-center">
                   <h3><span style="ftco-heading-2">`+ data['Item_Name'] +`</span></h3>

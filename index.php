@@ -10,7 +10,7 @@
 	<?php include "assets/php-modules/header.php"?>
 
     <section class="home-slider owl-carousel">
-      <div class="slider-item" style="background-image: url(images/bg_1.jpg);">
+      <div class="slider-item" style="background-image: url(assets/images/bg_1.jpg);">
       	<div class="overlay"></div>
         <div class="container">
           <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
@@ -26,7 +26,7 @@
         </div>
       </div>
 
-      <div class="slider-item" style="background-image: url(images/bg_2.jpg);">
+      <div class="slider-item" style="background-image: url(assets/images/bg_2.jpg);">
       	<div class="overlay"></div>
         <div class="container">
           <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
@@ -42,7 +42,7 @@
         </div>
       </div>
 
-      <div class="slider-item" style="background-image: url(images/bg_3.jpg);">
+      <div class="slider-item" style="background-image: url(assets/images/bg_3.jpg);">
       	<div class="overlay"></div>
         <div class="container">
           <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
@@ -132,7 +132,7 @@
     </section>
 
     <section class="ftco-about d-md-flex">
-    	<div class="one-half img" style="background-image: url(images/about.jpg);"></div>
+    	<div class="one-half img" style="background-image: url(assets/images/about.jpg);"></div>
     	<div class="one-half ftco-animate">
     		<div class="overlap">
 	        <div class="heading-section ftco-animate ">
@@ -200,22 +200,22 @@
     				<div class="row">
     					<div class="col-md-6">
     						<div class="menu-entry">
-		    					<a href="#" class="img" style="background-image: url(images/menu/Espresso_Shot.jpg);" alt='Coffee'></a>
+		    					<a href="#" class="img" style="background-image: url(assets/images/menu/Espresso_Shot.jpg);" alt='Coffee'></a>
 		    				</div>
     					</div>
     					<div class="col-md-6">
     						<div class="menu-entry mt-lg-4">
-		    					<a href="#" class="img" style="background-image: url(images/menu/Coffee.jpg);" alt='Coffee'></a>
+		    					<a href="#" class="img" style="background-image: url(assets/images/menu/Coffee.jpg);" alt='Coffee'></a>
 		    				</div>
     					</div>
     					<div class="col-md-6">
     						<div class="menu-entry">
-		    					<a href="#" class="img" style="background-image: url(images/bg_2.jpg);" alt='Coffee'></a>
+		    					<a href="#" class="img" style="background-image: url(assets/images/bg_2.jpg);" alt='Coffee'></a>
 		    				</div>
     					</div>
     					<div class="col-md-6">
     						<div class="menu-entry mt-lg-4">
-		    					<a href="#" class="img" style="background-image: url(images/menu/Latte.jpg);" alt='Coffee'></a>
+		    					<a href="#" class="img" style="background-image: url(assets/images/menu/Latte.jpg);" alt='Coffee'></a>
 		    				</div>
     					</div>
     				</div>
@@ -224,7 +224,7 @@
     	</div>
     </section>
 
-    <section class="ftco-counter ftco-bg-dark img" id="section-counter" style="background-image: url(images/bg_2.jpg);" data-stellar-background-ratio="0.5" alt='Coffee'>
+    <section class="ftco-counter ftco-bg-dark img" id="section-counter" style="background-image: url(assets/images/bg_2.jpg);" data-stellar-background-ratio="0.5" alt='Coffee'>
 			<div class="overlay"></div>
       <div class="container">
         <div class="row justify-content-center">
@@ -284,7 +284,7 @@
         <div class="row">
         	<div class="col-md-3">
         		<div class="menu-entry">
-    					<a href="#" class="img" style="background-image: url(images/menu/Coffee.jpg);" alt='Coffee'></a>
+    					<a href="#" class="img" style="background-image: url(assets/images/menu/Coffee.jpg);" alt='Coffee'></a>
     					<div class="text text-center pt-4">
     						<h3><a href="#">Coffee Capuccino</a></h3>
     						<p>A small river named Duden flows by their place and supplies</p>
@@ -295,7 +295,7 @@
         	</div>
         	<div class="col-md-3">
         		<div class="menu-entry">
-    					<a href="#" class="img" style="background-image: url(images/menu/Espresso_Shot.jpg);" alt='Coffee'></a>
+    					<a href="#" class="img" style="background-image: url(assets/images/menu/Espresso_Shot.jpg);" alt='Coffee'></a>
     					<div class="text text-center pt-4">
     						<h3><a href="#">Coffee Capuccino</a></h3>
     						<p>A small river named Duden flows by their place and supplies</p>
@@ -306,7 +306,7 @@
         	</div>
         	<div class="col-md-3">
         		<div class="menu-entry">
-    					<a href="#" class="img" style="background-image: url(images/bg_2.jpg);" alt='Coffee'></a>
+    					<a href="#" class="img" style="background-image: url(assets/images/bg_2.jpg);" alt='Coffee'></a>
     					<div class="text text-center pt-4">
     						<h3><a href="#">Coffee Capuccino</a></h3>
     						<p>A small river named Duden flows by their place and supplies</p>
@@ -317,7 +317,7 @@
         	</div>
         	<div class="col-md-3">
         		<div class="menu-entry">
-    					<a href="#" class="img" style="background-image: url(images/menu/Latte.jpg);" alt='Coffee'></a>
+    					<a href="#" class="img" style="background-image: url(assets/images/menu/Latte.jpg);" alt='Coffee'></a>
     					<div class="text text-center pt-4">
     						<h3><a href="#">Coffee Capuccino</a></h3>
     						<p>A small river named Duden flows by their place and supplies</p>
@@ -334,28 +334,28 @@
     	<div class="container-wrap">
     		<div class="row no-gutters">
 					<div class="col-md-3 ftco-animate">
-						<a href="gallery.html" class="gallery img d-flex align-items-center" style="background-image: url(images/gallery-1.jpg);" alt='Coffee'>
+						<a href="gallery.html" class="gallery img d-flex align-items-center" style="background-image: url(assets/images/gallery-1.jpg);" alt='Coffee'>
 							<div class="icon mb-4 d-flex align-items-center justify-content-center">
     						<span class="icon-search"></span>
     					</div>
 						</a>
 					</div>
 					<div class="col-md-3 ftco-animate">
-						<a href="gallery.html" class="gallery img d-flex align-items-center" style="background-image: url(images/gallery-2.jpg);" alt='Coffee'>
+						<a href="gallery.html" class="gallery img d-flex align-items-center" style="background-image: url(assets/images/gallery-2.jpg);" alt='Coffee'>
 							<div class="icon mb-4 d-flex align-items-center justify-content-center">
     						<span class="icon-search"></span>
     					</div>
 						</a>
 					</div>
 					<div class="col-md-3 ftco-animate">
-						<a href="gallery.html" class="gallery img d-flex align-items-center" style="background-image: url(images/gallery-3.jpg);" alt='Coffee'>
+						<a href="gallery.html" class="gallery img d-flex align-items-center" style="background-image: url(assets/images/gallery-3.jpg);" alt='Coffee'>
 							<div class="icon mb-4 d-flex align-items-center justify-content-center">
     						<span class="icon-search"></span>
     					</div>
 						</a>
 					</div>
 					<div class="col-md-3 ftco-animate">
-						<a href="gallery.html" class="gallery img d-flex align-items-center" style="background-image: url(images/gallery-4.jpg);" alt='Coffee'>
+						<a href="gallery.html" class="gallery img d-flex align-items-center" style="background-image: url(assets/images/gallery-4.jpg);" alt='Coffee'>
 							<div class="icon mb-4 d-flex align-items-center justify-content-center">
     						<span class="icon-search"></span>
     					</div>
@@ -394,7 +394,7 @@
 		              	<div class="row">
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/menu/Burger.jpg);" alt='Coffee'></a>
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(assets/images/menu/Burger.jpg);" alt='Coffee'></a>
 		              				<div class="text">
 		              					<h3><a href="#">Burger</a></h3>
 		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -405,7 +405,7 @@
 		              		</div>
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/menu/Breakfast_Burger.jpg);" alt='Coffee'></a>
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(assets/images/menu/Breakfast_Burger.jpg);" alt='Coffee'></a>
 		              				<div class="text">
 		              					<h3><a href="#">Breakfast Burger</a></h3>
 		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -416,7 +416,7 @@
 		              		</div>
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/menu/Grilled_Salmon.jpg);" alt='Coffee'></a>
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(assets/images/menu/Grilled_Salmon.jpg);" alt='Coffee'></a>
 		              				<div class="text">
 		              					<h3><a href="#">Grilled Salmon</a></h3>
 		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -432,7 +432,7 @@
 		                <div class="row">
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/menu/Sparkling_Mojito.jpg);" alt='Coffee'></a>
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(assets/images/menu/Sparkling_Mojito.jpg);" alt='Coffee'></a>
 		              				<div class="text">
 		              					<h3><a href="#">Sparkling Mojito</a></h3>
 		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -443,7 +443,7 @@
 		              		</div>
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/menu/Cosmopolitan.jpg);" alt='Coffee'></a>
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(assets/images/menu/Cosmopolitan.jpg);" alt='Coffee'></a>
 		              				<div class="text">
 		              					<h3><a href="#">Cosmopolitan</a></h3>
 		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -454,7 +454,7 @@
 		              		</div>
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/menu/Mimosa.jpg);" alt='Coffee'></a>
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(assets/images/menu/Mimosa.jpg);" alt='Coffee'></a>
 		              				<div class="text">
 		              					<h3><a href="#">Mimosa</a></h3>
 		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -470,7 +470,7 @@
 		                <div class="row">
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/menu/Rose_&_French_Raspberry_Cheesecake.jpg);" alt='Coffee'></a>
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(assets/images/menu/Rose_&_French_Raspberry_Cheesecake.jpg);" alt='Coffee'></a>
 		              				<div class="text">
 		              					<h3><a href="#">Hot Cake Honey</a></h3>
 		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -481,7 +481,7 @@
 		              		</div>
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/menu/Large_Pancakes.jpg);" alt='Coffee'></a>
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(assets/images/menu/Large_Pancakes.jpg);" alt='Coffee'></a>
 		              				<div class="text">
 		              					<h3><a href="#">Hot Cake Honey</a></h3>
 		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -492,7 +492,7 @@
 		              		</div>
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/menu/Kids_Dessert.jpg);" alt='Coffee'></a>
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(assets/images/menu/Kids_Dessert.jpg);" alt='Coffee'></a>
 		              				<div class="text">
 		              					<h3><a href="#">Hot Cake Honey</a></h3>
 		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -511,7 +511,7 @@
     	</div>
     </section>
 
-    <section class="ftco-section img" id="ftco-testimony" style="background-image: url(images/bg_1.jpg);"  data-stellar-background-ratio="0.5">
+    <section class="ftco-section img" id="ftco-testimony" style="background-image: url(assets/images/bg_1.jpg);"  data-stellar-background-ratio="0.5">
     	<div class="overlay"></div>
 	    <div class="container">
 	      <div class="row justify-content-center mb-5">
@@ -531,7 +531,7 @@
 	              </blockquote>
 	              <div class="author d-flex mt-4">
 	                <div class="image mr-3 align-self-center">
-	                  <img src="images/person_3.jpg"  alt='Coffee'>
+	                  <img src="assets/images/person_3.jpg"  alt='Coffee'>
 	                </div>
 	                <div class="name align-self-center">Louise Kelly <span class="position">Illustrator Designer</span></div>
 	              </div>
@@ -544,7 +544,7 @@
 	              </blockquote>
 	              <div class="author d-flex mt-4">
 	                <div class="image mr-3 align-self-center">
-	                  <img src="images/person_2.jpg"  alt='Coffee'>
+	                  <img src="assets/images/person_2.jpg"  alt='Coffee'>
 	                </div>
 	                <div class="name align-self-center">Louise Kelly <span class="position">Illustrator Designer</span></div>
 	              </div>
@@ -557,7 +557,7 @@
 	              </blockquote>
 	              <div class="author d-flex mt-4">
 	                <div class="image mr-3 align-self-center">
-	                  <img src="images/person_3.jpg"  alt='Coffee'>
+	                  <img src="assets/images/person_3.jpg"  alt='Coffee'>
 	                </div>
 	                <div class="name align-self-center">Louise Kelly <span class="position">Illustrator Designer</span></div>
 	              </div>
@@ -570,7 +570,7 @@
 	              </blockquote>
 	              <div class="author d-flex mt-4">
 	                <div class="image mr-3 align-self-center">
-	                  <img src="images/person_2.jpg"  alt='Coffee'>
+	                  <img src="assets/images/person_2.jpg"  alt='Coffee'>
 	                </div>
 	                <div class="name align-self-center">Louise Kelly <span class="position">Illustrator Designer</span></div>
 	              </div>
@@ -583,7 +583,7 @@
 	            </blockquote>
 	            <div class="author d-flex mt-4">
 	              <div class="image mr-3 align-self-center">
-	                <img src="images/person_3.jpg"  alt='Coffee'>
+	                <img src="assets/images/person_3.jpg"  alt='Coffee'>
 	              </div>
 	              <div class="name align-self-center">Louise Kelly <span class="position">Illustrator Designer</span></div>
 	            </div>
@@ -604,7 +604,7 @@
         <div class="row d-flex">
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/menu/Vegetarian_Pizza.jpg');">
+              <a href="blog-single.html" class="block-20" style="background-image: url('assets/images//menu/Vegetarian_Pizza.jpg');">
               </a>
               <div class="text py-4 d-block">
               	<div class="meta">
@@ -619,7 +619,7 @@
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/menu/Spaghetti.jpg');">
+              <a href="blog-single.html" class="block-20" style="background-image: url('assets/images//menu/Spaghetti.jpg');">
               </a>
               <div class="text py-4 d-block">
               	<div class="meta">
@@ -634,7 +634,7 @@
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/menu/Cheesy_Butter_Pasta.jpg');">
+              <a href="blog-single.html" class="block-20" style="background-image: url('assets/images//menu/Cheesy_Butter_Pasta.jpg');">
               </a>
               <div class="text py-4 d-block">
               	<div class="meta">
@@ -707,6 +707,6 @@
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
-<script src="assets/js/jquery.min.js"></script><script src="assets/js/jquery-migrate-3.0.1.min.js"></script><script src="assets/js/popper.min.js"></script><script src="assets/js/bootstrap.min.js"></script><script src="assets/js/jquery.easing.1.3.js"></script><script src="assets/js/jquery.waypoints.min.js"></script><script src="assets/js/jquery.stellar.min.js"></script><script src="assets/js/owl.carousel.min.js"></script><script src="assets/js/jquery.magnific-popup.min.js"></script><script src="assets/js/aos.js"></script><script src="assets/js/jquery.animateNumber.min.js"></script><script src="assets/js/bootstrap-datepicker.js"></script><script src="assets/js/jquery.timepicker.min.js"></script><script src="assets/js/scrollax.min.js"></script><script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&v=weekly"></script><script src="assets/js/google-map.js"></script><script src="assets/js/main.js"></script>
+<script src="assets/js/jquery.min.js"></script><script src="assets/js/jquery-migrate-3.0.1.min.js"></script><script src="assets/js/popper.min.js"></script><script src="assets/js/bootstrap.min.js"></script><script src="assets/js/jquery.easing.1.3.js"></script><script src="assets/js/jquery.waypoints.min.js"></script><script src="assets/js/jquery.stellar.min.js"></script><script src="assets/js/owl.carousel.min.js"></script><script src="assets/js/jquery.magnific-popup.min.js"></script><script src="assets/js/aos.js"></script><script src="assets/js/jquery.animateNumber.min.js"></script><script src="assets/js/bootstrap-datepicker.js"></script><script src="assets/js/jquery.timepicker.min.js"></script><script src="assets/js/scrollax.min.js"></script><script src="assets/js/main.js"></script>
   </body>
 </html>

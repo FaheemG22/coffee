@@ -60,7 +60,7 @@ lastPost = 0;
                 </div>
               </div>
               <hr>
-              <img src="images/cakerate/` + data['Img_Link'] + `" class="img-thumbnail rounded mx-auto d-block usercontent">
+              <img src="assets/images/cakerate/` + data['Img_Link'] + `" class="img-thumbnail rounded mx-auto d-block usercontent">
               <hr>
               <br>
               <div class="d-flex justify-content-center" style="margin-top:-40px;">
