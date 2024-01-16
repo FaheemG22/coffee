@@ -7,7 +7,7 @@
 
   </head>
   <body>
-  <?php include "assets/php-modules/header.php"?>
+  <?php include "./header.php"?>
   
     <!-- END nav -->
 
@@ -28,8 +28,77 @@
       </div>
     </section>
 
-<?php include "assets/php-modules/menu_form.php" ?>
 
+
+<?php
+$host = 'localhost';
+$S_user = 'root';
+$S_password = '';
+$db ='Coffee';
+
+$conn = mysqli_connect($host,$S_user,$S_password,$db);
+
+if($conn){}
+    else{echo "db connection error because of".mysqli_connect_error();}
+
+    try{
+      echo '<div>';
+      if (isset($admin) && ($admin)){
+        echo'
+        <div name="form3" id="new_item_form" class="modal">
+        <span onclick="document.getElementById("new_item_form").style.display="none";" class="close" title="Close Modal">&times;</span>
+        <form autocomplete="on"  class="modal-content" method="post" action="api/menu/upload.php" enctype="multipart/form-data" style="width:40%;min-width:250px;min-height:500px;">
+          <div class="container">
+          <h1>New Item</h1>
+          <p>Please fill in this form to create a new menu item</p>
+          <hr>
+          
+          <div class="mb-3">
+          <input type="text" name="Name" placeholder="Dish Name" required>
+              <input type="number" min="0.50" step="0.05" name="Price" placeholder="Dish Price" required style="min-width:150px;">
+          
+          <div>	
+          <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" style="width: 30%;height:50px;" name="Type">
+          <option value="Main" class="text-white bg-dark">Main</option>
+          <option value="Appetiser" class="text-white bg-dark">Appetiser</option>
+          <option value="Drink" class="text-white bg-dark">Drink</option>
+          <option value="Coffee" class="text-white bg-dark">Coffee</option>
+          </select>
+          <img id="blah" src="#" alt="your image" / style="width: 15%;height: auto;">
+          </div>
+          <input class="form-control form-control-bg bg-dark text-white" id="fileToUpload" name="fileToUpload" required type="file">
+          
+          </div>
+
+          <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+          <div class="clearfix">
+            <button type="button" onclick="document.getElementById("new_item_form").style.display="none"" class="cancelbtn">Cancel</button>
+            <button type="submit" class="signupbtn" formaction="api/menu/menu_upload.php">Submit</button>
+          </div>
+          </div>
+        </form>
+      </div>
+      <script>
+      fileToUpload.onchange = evt => {
+        const [file] = fileToUpload.files
+        if (file) {
+          blah.src = URL.createObjectURL(file)
+        }
+      }
+      </script>';
+
+      echo'
+      <button class="btn btn-danger" onclick="items()"> Add new item to menu </button></li>
+      </div>';
+    }
+    }
+
+
+    catch(Exception $e) {
+        echo 'Incorrect Email or password';
+}
+
+?>
 <span id="refresh" class="ftco-animate"></span>
     <footer class="ftco-footer ftco-section img">
     	<div class="overlay"></div>
@@ -112,8 +181,89 @@
 
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+  <script>
+  data = [];
+  block = [];
+  oldJsonLength = []
 
+<<<<<<< HEAD
 <script src="assets/js/menu-update.js"></script><script>function items(){document.getElementById('new_item_form').style.display='block'}</script><script src="assets/js/jquery.min.js"></script><script src="assets/js/jquery-migrate-3.0.1.min.js"></script><script src="assets/js/popper.min.js"></script><script src="assets/js/bootstrap.min.js"></script><script src="assets/js/jquery.easing.1.3.js"></script><script src="assets/js/jquery.waypoints.min.js"></script><script src="assets/js/jquery.stellar.min.js"></script><script src="assets/js/owl.carousel.min.js"></script><script src="assets/js/jquery.magnific-popup.min.js"></script><script src="assets/js/aos.js"></script><script src="assets/js/jquery.animateNumber.min.js"></script><script src="assets/js/bootstrap-datepicker.js"></script><script src="assets/js/jquery.timepicker.min.js"></script><script src="assets/js/scrollax.min.js"></script></script></script><script src="assets/js/main.js"></script>
   
+=======
+  function request_menu(inp) {
+    return new Promise((resolve, reject) => {
+      const xmlhttp = new XMLHttpRequest();
+      xmlhttp.open("GET", "api/menu/menu_update.php?type=" + inp);
+      xmlhttp.send();
+      xmlhttp.onload = function () {resolve(this.responseText);};
+      xmlhttp.onerror = function () {reject(new Error("Request failed"));};
+    });
+  }
+
+  function jsonProccess(jsonData,type){
+    block = block +(`<div class="col-md-6 mb-5 pb-3 heading-section"> 
+    <h3 class="subheading" style="margin-bottom:50px;">` + type + `'s</h3>`);
+
+    for (var row = 0; row < jsonData.length; row++){
+      var row_data = jsonData[row];
+
+      for (var key in row_data){
+          var value = row_data[key];
+          data[key] = value;
+
+          if (key == 'Img_Link'){displayItem(data);}
+      }
+    }
+    block = block + ('</div>')
+  }
+
+  function displayItem(data){
+    block= block +(`
+    <div class="pricing-entry d-flex ">
+                <div class="img" style="background-image: url(images/menu/`+ data['Img_Link'] +`);"></div>
+                <div class="desc pl-3">
+                <div class="d-flex text align-items-center">
+                    <h3><span style="ftco-heading-2">`+ data['Item_Name'] +`</span></h3>
+                    <h3 class="price">£` + data['Item_Cost'] + `</h3>
+                </div>
+                </div>
+                </div>
+    `)
+  }    
+
+  async function responseHandler(type){
+    try {
+        const response = await request_menu(type);
+        var jsonData = JSON.parse(response);
+        
+        if (oldJsonLength[type] != jsonData.length){
+        jsonProccess(jsonData,type);
+        document.getElementById("refresh").innerHTML = block;
+        oldJsonLength[type] =jsonData.length;
+        }
+        else {}
+
+      } 
+      catch (error) {console.error("Error:", error.message);}
+  }
+
+  async function refresh() {
+    const types = ['Drink', 'Main', 'Dessert', 'Appetiser', 'Coffee'];
+    block = '';
+    
+    block = block + (`<section class="ftco-section"><div class="container"><div class="row">`)
+    
+    for (let i = 0; i < types.length; i++) {
+      await responseHandler(types[i])
+      
+    }
+  }
+
+  refresh();
+  setInterval(refresh, 5000);
+</script>
+<script>function items(){document.getElementById('new_item_form').style.display='block';invis()}</script><script src="js/jquery.min.js"></script><script src="js/jquery-migrate-3.0.1.min.js"></script><script src="js/popper.min.js"></script><script src="js/bootstrap.min.js"></script><script src="js/jquery.easing.1.3.js"></script><script src="js/jquery.waypoints.min.js"></script><script src="js/jquery.stellar.min.js"></script><script src="js/owl.carousel.min.js"></script><script src="js/jquery.magnific-popup.min.js"></script><script src="js/aos.js"></script><script src="js/jquery.animateNumber.min.js"></script><script src="js/bootstrap-datepicker.js"></script><script src="js/jquery.timepicker.min.js"></script><script src="js/scrollax.min.js"></script><script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&v=weekly"></script><script src="js/google-map.js"></script><script src="js/main.js"></script>
+    
+>>>>>>> parent of e901844 (Code Reformat)
   </body>
 </html>
