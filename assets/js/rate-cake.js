@@ -1,9 +1,9 @@
 lastPost = 0;
-  let old_len = 1;
+  let old_len = -1;
   let new_len = 0;
   
   displayUpdate()
-  setInterval(displayUpdate,5000)
+  setInterval(displayUpdate,1000)
 
   function displayUpdate() {
     const xmlhttp = new XMLHttpRequest();
@@ -13,6 +13,7 @@ lastPost = 0;
     }
     xmlhttp.open("GET", "api/cake/cake_update.php?q=" + lastPost);
     xmlhttp.send();
+    
   }
 
   function dataHandler(newData){
@@ -38,6 +39,7 @@ lastPost = 0;
               
               if (key == 'Date_Time'){
                 displayPost(data);
+                console.log(data)
                  
               }
           }
@@ -70,7 +72,7 @@ lastPost = 0;
                 <div class="heart"></div>
               </div>
               <div class="d-flex justify-content-center">
-                <p class="text-center likes"> 100 Likes</p>
+                <p class="text-center likes"> 0 Likes</p>
               </div>
             </div>            
           </div>
