@@ -1,4 +1,5 @@
 lastPost = 0;
+block = [];
   let old_len = -1;
   let new_len = 0;
   
@@ -18,7 +19,7 @@ lastPost = 0;
 
   function dataHandler(newData){
     var jsonData = JSON.parse(newData);
-      block = [];
+      
       data = [];
       new_len = jsonData.length;
       if (new_len != old_len){
@@ -39,8 +40,7 @@ lastPost = 0;
               
               if (key == 'Date_Time'){
                 displayPost(data);
-                console.log(data)
-                 
+                console.log(data);       
               }
           }
         }
