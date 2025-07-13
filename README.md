@@ -4,8 +4,8 @@ This is a college project where I just built a quick XAMMP site for a coffee sho
 The menu was also live so if someone updated the prices or registers it out of stock it will show on this end and stop them from being able to add it to their cart
 <img width="1155" height="1165" alt="image" src="https://github.com/user-attachments/assets/3a326805-df86-4973-beb0-c1a48bca5bf6" />
 
-The admin Menu for adding new items to the menu
-<img width="1155" height="1165" alt="image" src="https://github.com/user-attachments/assets/9de7dcf6-28c2-4c0d-83bb-9dabdc3e6633" />
+The admin Menu for adding new items to the menu for the backend
+<img width="1084" height="913" alt="image" src="https://github.com/user-attachments/assets/85dd0f31-399f-4208-9221-4914aa493fce" />
 
 Quickie Chrome Lighthouse Test
 <img width="690" height="149" alt="image" src="https://github.com/user-attachments/assets/66ae6621-c65f-404a-8d11-96410e691cdb" />
