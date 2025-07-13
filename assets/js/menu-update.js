@@ -1,11 +1,5 @@
 data = [];
-var block = {
-  Drink: "",
-  Main: "",
-  Desert: "",
-  Appetiser: "",
-  Coffee: ""
-};
+block = [];
 oldJsonLength = []
 
 function request_menu(inp) {
@@ -24,23 +18,19 @@ function jsonProccess(jsonData,type){
 
   for (var row = 0; row < jsonData.length; row++){
     var row_data = jsonData[row];
-    
 
     for (var key in row_data){
         var value = row_data[key];
         data[key] = value;
-        
 
-        if (key == 'Img_Link'){displayItem(data,type);}
+        if (key == 'Img_Link'){displayItem(data);}
     }
   }
   block = block + ('</div>')
 }
 
-function displayItem(data,type){
-  console.log(data)
-  console.log(type)
-  block[type] = block[type] + (`
+function displayItem(data){
+  block= block +(`
   <div class="pricing-entry d-flex ">
               <div class="img" style="background-image: url(assets/images/menu/`+ data['Img_Link'] +`);"></div>
               <div class="desc pl-3">
@@ -51,7 +41,6 @@ function displayItem(data,type){
               </div>
               </div>
   `)
-  
 }    
 
 async function responseHandler(type){
@@ -72,11 +61,14 @@ async function responseHandler(type){
 
 async function refresh() {
   const types = ['Drink', 'Main', 'Dessert', 'Appetiser', 'Coffee'];
+  data = [];
+  block = [];
   
-  block[-1] = block + (`<section class="ftco-section"><div class="container"><div class="row">`)
+  block = block + (`<section class="ftco-section"><div class="container"><div class="row">`)
   
   for (let i = 0; i < types.length; i++) {
     await responseHandler(types[i])
+    
   }
 }
 

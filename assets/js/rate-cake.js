@@ -1,5 +1,4 @@
 lastPost = 0;
-block = [];
   let old_len = -1;
   let new_len = 0;
   
@@ -19,7 +18,7 @@ block = [];
 
   function dataHandler(newData){
     var jsonData = JSON.parse(newData);
-      
+      block = [];
       data = [];
       new_len = jsonData.length;
       if (new_len != old_len){
@@ -40,7 +39,8 @@ block = [];
               
               if (key == 'Date_Time'){
                 displayPost(data);
-                console.log(data);       
+                console.log(data)
+                 
               }
           }
         }
@@ -55,18 +55,18 @@ block = [];
           <div class="container">
               <div class="heading-section">
                 <div class="flex">
-                <span class="subheading text-center"><p style="font-size:128px"> ${data['Cake_Name']} </p></span>
+                <span class="subheading text-center"><p style="font-size:128px">` + data['Cake_Name'] + `</p></span>
                 </div>
                 <div>
-                <span class="subheading text-center time" style="font-size:30px;"> ${data['Date_Time']} </span>
+                <span class="subheading text-center time" style="font-size:30px;">` + data['Date_Time'] + `</span>
                 </div>
               </div>
               <hr>
-              <img src="assets/images/cakerate/${data['Img_Link']}  " class="img-thumbnail rounded mx-auto d-block usercontent">
+              <img src="assets/images/cakerate/` + data['Img_Link'] + `" class="img-thumbnail rounded mx-auto d-block usercontent">
               <hr>
               <br>
               <div class="d-flex justify-content-center" style="margin-top:-40px;">
-              <span class="subheading text-center"><p style="font-size:32px"> Posted by: ${data['User_ID']} </p></span>
+              <span class="subheading text-center"><p style="font-size:32px"> Posted by: ` + data['User_ID'] + `</p></span>
               </div>
               <div class="d-flex justify-content-center" style="margin-top:-40px;">
                 <div class="heart"></div>
