@@ -6,6 +6,8 @@ The menu was also live so if someone updated the prices or registers it out of s
 
 The admin Menu for adding new items to the menu for the backend
 <img width="1084" height="913" alt="image" src="https://github.com/user-attachments/assets/85dd0f31-399f-4208-9221-4914aa493fce" />
+This is what it looks like after
+<img width="880" height="544" alt="image" src="https://github.com/user-attachments/assets/71b71d21-6aca-43dd-88b3-d83378d63b0e" />
 
 Quickie Chrome Lighthouse Test
 <img width="690" height="149" alt="image" src="https://github.com/user-attachments/assets/66ae6621-c65f-404a-8d11-96410e691cdb" />
